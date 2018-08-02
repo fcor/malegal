@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import Navbar from './components/Navbar'
+import TopSection from './components/TopSection'
 import './App.css'
 
 class App extends Component {
@@ -26,10 +26,15 @@ class App extends Component {
   render() {
     const { lang } = this.state
     return (
-      <div className="contenedor">
+      <div className="app">
         <Router>
           <div>
-            <Navbar />
+            <Route render={ (props) => {
+              // console.log(props.location.pathname);
+              return (
+                <TopSection location={props.location.pathname} lang={lang} />
+              )
+            }} />
             <Route render={({ location }) =>
               <TransitionGroup exit={false}>
                 <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
