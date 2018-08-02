@@ -8,22 +8,27 @@ const Navbar = ({ variant }) =>
     <Logo />
     <div className="menu row">
       <NavLink
+        exact
         to='/'
+        activeClassName="selected"
         >
         Nosotros
       </NavLink>
       <NavLink
         to='/areas'
+        activeClassName="selected"
         >
           Áreas de práctica
       </NavLink>
       <NavLink
         to='/equipo'
+        activeClassName="selected"
         >
         Equipo
       </NavLink>
       <NavLink
         to='/trabajo'
+        activeClassName="selected"
         >
         Trabaje con nosotros
       </NavLink>

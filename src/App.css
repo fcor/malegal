@@ -111,3 +111,7 @@ a:hover{
   font-family: 'Montserrat';
   font-weight: 500;
 }
+
+.selected{
+  color: #5D9AAF;
+}
