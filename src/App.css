@@ -73,12 +73,12 @@ body{
 }
 
 .logo-big{
-  width: 180px;
+  width: 220px;
 }
 
 /* TopSection Styles */
 .top-section{
-  background-color: #1A2934;
+  background-color: #2A3D4C;
 }
 
 .top-section.img{
@@ -122,25 +122,25 @@ body{
   color: #5D9AAF;
 }
 
-.selected{
+.menu a.selected{
   color: #5D9AAF;
 }
 
 /* Footer styles */
 footer{
-  background-color: #1A2934;
+  background-color: #2A3D4C;
   flex-shrink: 0;
 }
 
 .footer-box{
-  padding: 30px 40px 0 40px;
+  padding: 73px 100px 0 100px;
 }
 
 .footer-box-top{
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .contact-box{
@@ -149,7 +149,7 @@ footer{
 }
 
 .contact-box-left{
-  margin-right: 70px;
+  margin-right: 100px;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -173,7 +173,7 @@ footer{
 }
 
 .contact-detail-text{
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 14px;
   color: #5D9AAF;
@@ -186,8 +186,8 @@ footer{
 }
 
 .menu-footer a{
-  font-family: 'Montserrat';
-  font-weight: 500;
+  font-family: 'Roboto';
+  font-weight: 400;
   text-decoration: none;
   font-size: 14px;
   color: #5D9AAF;
@@ -198,12 +198,12 @@ footer{
 .privacy-box{
   width: 100%;
   height: 50px;
-  border-top: 2px solid #2A3D4C;
+  border-top: 2px solid #1A2934;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-family: 'Montserrat';
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   color: #5D9AAF;
 }
