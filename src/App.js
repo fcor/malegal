@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import TopSection from './components/TopSection'
+import Footer from './components/Footer'
 import './App.css'
 
 class App extends Component {
@@ -26,33 +27,32 @@ class App extends Component {
   render() {
     const { lang } = this.state
     return (
-      <div className="app">
         <Router>
-          <div>
-            <Route render={ (props) => {
-              // console.log(props.location.pathname);
-              return (
-                <TopSection location={props.location.pathname} lang={lang} />
-              )
-            }} />
-            <Route render={({ location }) =>
-              <TransitionGroup exit={false}>
-                <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
-                <Switch location={location}>
-                  <Route exact path="/" render={() => <About lang={lang} />} />
-                  <Route path="/areas" render={() => <Areas  lang={lang} />} />
-                  <Route path="/equipo" render={() => <Equipo lang={lang} />}/>
-                  <Route path="/trabajo" render={() => <Trabajo lang={lang} />}/>
-                  <Route render={() => <h1>Page not found</h1>} />
-                </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            }/>
+          <div className="app">
+            <div className="content">
+              <Route render={ (props) => {
+                return (
+                  <TopSection location={props.location.pathname} lang={lang} />
+                )
+              }} />
+              <Route render={({ location }) =>
+                <TransitionGroup exit={false}>
+                  <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
+                  <Switch location={location}>
+                    <Route exact path="/" render={() => <About lang={lang} />} />
+                    <Route path="/areas" render={() => <Areas  lang={lang} />} />
+                    <Route path="/equipo" render={() => <Equipo lang={lang} />}/>
+                    <Route path="/trabajo" render={() => <Trabajo lang={lang} />}/>
+                    <Route render={() => <h1>Page not found</h1>} />
+                  </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              }/>
+            </div>
+            <Footer />
           </div>
         </Router>
 
-        <Footer />
-      </div>
     );
   }
 }
@@ -75,11 +75,6 @@ const Equipo = () =>
 const Trabajo = () =>
   <div>
     Acá va el Trabajo
-  </div>
-
-const Footer = () =>
-  <div>
-    Acá va el Footer
   </div>
 
 export default App;
