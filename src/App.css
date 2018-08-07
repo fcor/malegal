@@ -79,6 +79,7 @@ body{
 /* TopSection Styles */
 .top-section{
   background-color: #2A3D4C;
+  position: relative;
 }
 
 .top-section.img{
@@ -86,6 +87,30 @@ body{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 600px;
+}
+
+.top-section-text{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-section-text h1{
+  color: #5D9AAF;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 60px;
+  margin: 0 0 30px 0;
+}
+
+.top-section-text p{
+  margin: 0;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 26px;
 }
 
 /* Navbar Styles */

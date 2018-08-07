@@ -8,6 +8,10 @@ const TopSection = ({ location }) =>{
       <div className="top-section img">
         <div className="container">
           <Navbar variant="home" />
+          <div className="top-section-text">
+            <h1>Construyendo Soluciones</h1>
+            <p>Firma multidisciplinaria y especializada, con experiencia, tanto en la consultoria como en el litigio.</p>
+          </div>
         </div>
       </div>
     )
