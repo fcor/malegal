@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import TopSection from './components/TopSection'
 import Footer from './components/Footer'
+import About from './components/About'
 import './App.css'
 
 class App extends Component {
@@ -56,11 +57,6 @@ class App extends Component {
     );
   }
 }
-
-const About = () =>
-  <div>
-    Acá va el About
-  </div>
 
 const Areas = () =>
   <div>
