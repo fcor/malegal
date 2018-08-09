@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import TopSection from './components/TopSection'
 import Footer from './components/Footer'
 import About from './components/About'
+import Team from './components/Team'
 import './App.css'
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
                   <Switch location={location}>
                     <Route exact path="/" render={() => <About lang={lang} />} />
                     <Route path="/areas" render={() => <Areas  lang={lang} />} />
-                    <Route path="/equipo" render={() => <Equipo lang={lang} />}/>
+                    <Route path="/equipo" render={() => <Team lang={lang} />}/>
                     <Route path="/trabajo" render={() => <Trabajo lang={lang} />}/>
                     <Route render={() => <h1>Page not found</h1>} />
                   </Switch>
@@ -63,10 +64,6 @@ const Areas = () =>
     Acá va el Areas
   </div>
 
-const Equipo = () =>
-  <div>
-    Acá va el Equipo
-  </div>
 
 const Trabajo = () =>
   <div>

@@ -1,24 +1,24 @@
 import React from 'react'
 import Links from './Links'
 import Logo from './Logo'
-import mar from '../assets/img/mar.png'
-import puerto from '../assets/img/puerto.png'
-import terrestre from '../assets/img/terrestre.png'
+import location from '../assets/img/location.png'
+import mail from '../assets/img/mail.png'
+import telephone from '../assets/img/telephone.png'
 
 const getContactDetails = (variant) => {
   if (variant === 'address') {
     return {
-      icon: mar,
+      icon: location,
       text: 'Calle 73 # 9-42 / Oficina 409 Bogotá, Colombia'
     }
   } else if (variant === 'phone') {
     return {
-      icon: puerto,
+      icon: telephone,
       text: '(+57) (1) 702 03 30'
     }
   } else {
     return {
-      icon: terrestre,
+      icon: mail,
       text: 'administrativo@malegal.co'
     }
   }
@@ -70,7 +70,7 @@ const ContactDetail = ({ variant }) => {
       <img
         src={contact.icon}
         alt={variant}
-        className="contact-detail-icon"
+        className={`contact-detail-icon ${variant === 'address' ? 'small' : '' }`}
       />
       <p className="contact-detail-text">
         {contact.text}
