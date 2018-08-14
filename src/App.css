@@ -183,7 +183,7 @@ body{
   font-family: 'Montserrat';
   font-size: 35px;
   font-weight: 600;
-  border-bottom: 6px solid #5D9AAF;
+  border-bottom: 4px solid #5D9AAF;
   width: 650px;
   text-align: center;
   padding-bottom: 8px;
@@ -280,14 +280,15 @@ body{
 
 .team-header{
   /* border: 1px solid blue; */
-  margin: 40px;
+  margin: 40px 0;
   color: #2A3D4C;
   font-family: 'Montserrat';
   font-size: 35px;
   font-weight: 600;
-  border-bottom: 6px solid #5D9AAF;
-  align-self: flex-start;
-  width: 390px;
+  border-bottom: 4px solid #5D9AAF;
+  padding-bottom: 8px;
+  /* align-self: flex-start; */
+  width: 350px;
   text-align: center;
 }
 
@@ -330,7 +331,7 @@ body{
 }
 
 .team-card-text p {
-  margin: 0;
+  margin: 3px 0 0 0;
   color: #2A3D4C;
   font-family: 'Montserrat';
   font-size: 14px;
