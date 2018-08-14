@@ -346,13 +346,15 @@ body{
 .team-card-text.modal{
   border-bottom: 3px solid #5D9AAF;
   padding-bottom: 8px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
+  margin: 18px 0 8px 30px;
+  width: 257px;
 }
 
 .team-card-text.title{
   border-bottom: 5px solid #5D9AAF;
   padding-bottom: 8px;
-  margin: 50px 0 50px 30px;
+  margin: 55px 0 55px 30px;
 }
 
 .team-card-text.title h1 {
@@ -378,13 +380,15 @@ body{
   /* border: 1px solid red; */
   background-color: #2A3D4C;
   align-items: flex-start;
+  height: 570px;
+  justify-content: flex-start;
 }
 
 .modal-right{
   align-items: flex-start;
   justify-content: flex-start;
   width: 56%;
-  height: 540px;
+  height: 570px;
   /* border: 1px solid blue; */
 }
 
@@ -405,7 +409,8 @@ body{
 .modal-contact-text{
   margin: 0;
   color: #D5EDFF;
-  font-family: 'Roboto'
+  font-family: 'Roboto';
+  font-size: 14px;
 }
 
 .modal-bio{
@@ -413,8 +418,9 @@ body{
   margin-left: 30px;
   color: #2A3D4C;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 16px;
   width: 340px;
+  text-align: justify;
 }
 
 /* Footer styles */

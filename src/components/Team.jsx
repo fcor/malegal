@@ -49,8 +49,8 @@ class Team extends React.Component {
           visible={isShowingDetails}
           onClose={this.onClose}
           animation="slideDown"
-          width={700}
-          height={540}
+          width={725}
+          height={570}
           >
           <Modal name={member} />
         </Rodal>

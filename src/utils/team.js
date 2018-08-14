@@ -48,7 +48,7 @@ const getMemberInfo = (name) => {
       position: 'Asociada',
       avatar: woman,
       email: 'laura@malegal.co',
-      bio: 'Abogada de la Pontificia Universidad Javeriana de Bogotá. Apoya al equipo de litigios ante la Superintendencia Financiera y Superintendencia de Sociedades, donde está encargada de la vigilancia de procesos y preparación de contestaciones y memoriales. También ejerce en actividades relacionadas con la Secretaría General de entidades vigiladas por la Superintendencia Financiera. Participa activamente en la elaboración de diferentes conceptos e investigaciones en el área de Derecho Financiero.'
+      bio: 'Abogada de la Pontificia Universidad Javeriana de Bogotá. Apoya al equipo de litigios ante la Superintendencia Financiera y ante la Superintendencia de Sociedades, donde está encargada de la vigilancia de procesos y preparación de contestaciones y memoriales. También ejerce en actividades relacionadas con la Secretaría General de entidades vigiladas por la Superintendencia Financiera. Participa activamente en la elaboración de diferentes conceptos e investigaciones en el área de Derecho Financiero.'
     }
   }
 }
