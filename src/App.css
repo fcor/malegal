@@ -338,6 +338,85 @@ body{
   font-weight: 500;
 }
 
+.team-card-text.modal p,
+.team-card-text.modal h1{
+  color: white;
+}
+
+.team-card-text.modal{
+  border-bottom: 3px solid #5D9AAF;
+  padding-bottom: 8px;
+  margin-left: 30px;
+}
+
+.team-card-text.title{
+  border-bottom: 5px solid #5D9AAF;
+  padding-bottom: 8px;
+  margin: 50px 0 50px 30px;
+}
+
+.team-card-text.title h1 {
+  font-size: 23px;
+}
+
+.team-card-text.title p {
+  font-size: 18px;
+}
+
+.rodal-dialog{
+  padding: 0 !important;
+}
+
+.team-modal{
+  /* width: 300px;
+  height: 300px; */
+
+}
+
+.modal-left{
+  width: 44%;
+  /* border: 1px solid red; */
+  background-color: #2A3D4C;
+  align-items: flex-start;
+}
+
+.modal-right{
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 56%;
+  height: 540px;
+  /* border: 1px solid blue; */
+}
+
+.modal-avatar{
+  width: 100%;
+}
+
+.modal-contact{
+  margin-left: 30px;
+  margin-bottom: 8.3px;
+}
+
+.modal-icon{
+  width: 15px;
+  margin-right: 10px;
+}
+
+.modal-contact-text{
+  margin: 0;
+  color: #D5EDFF;
+  font-family: 'Roboto'
+}
+
+.modal-bio{
+  margin: 0;
+  margin-left: 30px;
+  color: #2A3D4C;
+  font-family: 'Roboto';
+  font-size: 14px;
+  width: 340px;
+}
+
 /* Footer styles */
 footer{
   background-color: #2A3D4C;

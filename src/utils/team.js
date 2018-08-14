@@ -4,7 +4,7 @@ import woman from '../assets/img/woman.png'
 const getMemberInfo = (name) => {
   if (name === 'Daniela') {
     return {
-      name: 'Daniela Guerrero Ordoñéz',
+      name: 'Daniela Guerrero Ordoñez',
       position: 'Asociada',
       avatar: woman,
       email: 'daniela@malegal.co',

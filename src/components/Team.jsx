@@ -1,5 +1,9 @@
 import React from 'react'
+import Rodal from 'rodal';
 import getMemberInfo from '../utils/team.js'
+import 'rodal/lib/rodal.css'
+import avatar from '../assets/img/manLarge.png'
+import mail from '../assets/img/mail.png'
 
 const teamMembers = ['Daniela',
                      'Maria',
@@ -14,10 +18,11 @@ class Team extends React.Component {
     super(props)
     this.state = {
       isShowingDetails: false,
-      member: null
+      member: 'Daniela'
     }
 
     this.onClick = this.onClick.bind(this)
+    this.onClose = this.onClose.bind(this)
   }
 
   onClick(member){
@@ -28,9 +33,27 @@ class Team extends React.Component {
     })
   }
 
+  onClose(){
+    // console.log(member);
+    this.setState({
+      isShowingDetails: false,
+    })
+  }
+
   render() {
+    const { isShowingDetails, member } = this.state
+
     return(
       <div className="container">
+        <Rodal
+          visible={isShowingDetails}
+          onClose={this.onClose}
+          animation="slideDown"
+          width={700}
+          height={540}
+          >
+          <Modal name={member} />
+        </Rodal>
         <div className="team-box column">
           <Header />
           <Cards onClick={this.onClick} />
@@ -59,17 +82,65 @@ const Cards = ({ onClick }) =>
             alt="avatar"
             className="team-card-avatar"
           />
-          <div className="team-card-text">
-            <h1>
-              {member.name}
-            </h1>
-            <p>
-              {member.position}
-            </p>
-          </div>
+          <MemberText
+            name={member.name}
+            position={member.position}
+            variant=""
+          />
         </div>
       )
     })}
   </div>
+
+const Modal = ({ name }) => {
+  const member = getMemberInfo(name)
+
+  return(
+    <div className="team-modal row">
+      <div className="modal-left column">
+        <img
+          src={avatar}
+          alt="avatar"
+          className="modal-avatar"
+        />
+        <MemberText
+          name={member.name}
+          position={member.position}
+          variant="modal"
+        />
+        <div className="modal-contact row">
+          <img
+            src={mail}
+            alt="icon"
+            className="modal-icon"
+          />
+          <p className="modal-contact-text">
+            {member.email}
+          </p>
+        </div>
+      </div>
+      <div className="modal-right column">
+        <MemberText
+          name={member.name}
+          position={member.position}
+          variant="title"
+        />
+        <p className="modal-bio">
+          {member.bio}
+        </p>
+      </div>
+    </div>
+  )
+}
+
+const MemberText = ({name, position, variant}) =>
+<div className={`team-card-text ${variant}`}>
+  <h1>
+    {name}
+  </h1>
+  <p>
+    {position}
+  </p>
+</div>
 
 export default Team
