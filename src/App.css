@@ -425,7 +425,7 @@ body{
 
 /* Trabajo Styles */
 .work-box{
-  /* border: 1px solid red; */
+  padding: 100px;
 }
 
 .work-card{
@@ -436,10 +436,12 @@ body{
 }
 
 .work-form{
-  border: 1px solid blue;
-  width: 400px;
-  height: 500px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width: 450px;
+  height: 570px;
   margin-left: 40px;
+  border-radius: 8px;
+  position: relative;
 }
 
 .work-card header{
@@ -469,6 +471,125 @@ body{
 
 .work-card svg{
   fill: #5D9AAF;
+}
+
+.work-form header{
+  /* align-self: flex-start; */
+  font-family: 'Montserrat';
+  color: #2A3D4C;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  /* height: 50px; */
+  padding: 30px 0 30px 40px;
+}
+
+.rect{
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 8px;
+  height: 15px;
+  background-color: #5D9AAF;
+}
+
+.work-form-labels{
+  font-family: 'Montserrat';
+  color: #2A3D4C;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.work-form-input{
+  /* border: 1px solid blue; */
+  width: 330px;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.work-form-input input{
+  border: none;
+  border-bottom: 1px solid #2A3D4C;
+  width:320px;
+  color: #2A3D4C;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px;
+}
+
+.work-form-input input::placeholder {
+  font-family: 'Montserrat';
+  color: #2A3D4C;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.work-form-submit{
+  width: 330px;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.work-form-submit button{
+  background-color: #5D9AAF;
+  color: #D2EAFC;
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px;
+  border: none;
+  /* width: 200px; */
+  margin: 5px 0 0px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  transition: .2s;
+  will-change: transform;
+}
+
+.work-form-submit button:active{
+  transform: scale(.9);
+}
+
+.work-form-textarea{
+  width: 330px;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.work-form-textarea textarea{
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width: 330px;
+  height: 110px;
+  padding: 4px;
+  margin-top: 5px;
+}
+
+.submit{
+  background-color: #5D9AAF;
+  color: #D2EAFC;
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px;
+  border: none;
+  width: 200px;
+  /* margin: 25px 0 5px 0; */
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  margin-top: 10px;
+  transition: .2s;
+  will-change: transform;
+}
+
+.submit:active{
+transform: scale(.9);
 }
 
 /* Footer styles */
