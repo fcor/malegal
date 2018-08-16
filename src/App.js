@@ -5,6 +5,8 @@ import TopSection from './components/TopSection'
 import Footer from './components/Footer'
 import About from './components/About'
 import Team from './components/Team'
+import Areas from './components/Areas'
+import Trabajo from './components/Trabajo'
 import './App.css'
 
 class App extends Component {
@@ -58,16 +60,5 @@ class App extends Component {
     );
   }
 }
-
-const Areas = () =>
-  <div>
-    Acá va el Areas
-  </div>
-
-
-const Trabajo = () =>
-  <div>
-    Acá va el Trabajo
-  </div>
 
 export default App;
