@@ -208,7 +208,7 @@ body{
   padding: 35px 0 35px 0;
   background-color: white;
   transition: .25s;
-  color: #2A3D4C
+  color: #2A3D4C;
 }
 
 .about-card svg{
@@ -487,9 +487,9 @@ body{
 .rect{
   position: absolute;
   left: 0;
-  top: 32px;
-  width: 8px;
-  height: 15px;
+  top: 30px;
+  width: 6px;
+  height: 20px;
   background-color: #5D9AAF;
 }
 
@@ -539,10 +539,10 @@ body{
   text-align: center;
   font-size: 12px;
   font-weight: 500;
-  padding: 5px;
+  padding: 5px 10px;;
   border: none;
   /* width: 200px; */
-  margin: 5px 0 0px 0;
+  margin: 8px 0 0px 0;
   border-radius: 5px;
   cursor: pointer;
   outline: 0;
@@ -565,8 +565,11 @@ body{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width: 330px;
   height: 110px;
-  padding: 4px;
   margin-top: 5px;
+  color: #2A3D4C;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px;
 }
 
 .submit{

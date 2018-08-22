@@ -36,8 +36,12 @@ const Text = () =>
 
 const Cards = () =>
   <div className=" about-cards column">
-    <Card variant="one" />
-    <Card variant="two" />
+    {/* <Link to="areas" > */}
+      <Card variant="one" />
+    {/* </Link> */}
+    {/* <Link to="areas" > */}
+      <Card variant="two" />
+    {/* </Link> */}
   </div>
 
 
