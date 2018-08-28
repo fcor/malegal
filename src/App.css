@@ -595,6 +595,74 @@ body{
 transform: scale(.9);
 }
 
+/* Areas Styles */
+.areas-header{
+  margin: 40px 0;
+}
+.areas-header h1{
+  /* border: 1px solid blue; */
+  margin: 0;
+  color: #2A3D4C;
+  font-family: 'Montserrat';
+  font-size: 35px;
+  font-weight: 600;
+  border-bottom: 4px solid #5D9AAF;
+  padding-bottom: 8px;
+  /* align-self: flex-start; */
+  width: 450px;
+  text-align: center;
+}
+
+.areas-header p{
+  margin: 14px 0 0 0;
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #2A3D4C;
+}
+
+.areas-card{
+  width: 950px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin-bottom: 30px;
+  border-radius: 8px;
+  /* height: 200px; */
+  overflow: hidden;
+}
+
+.areas-card:nth-child(4){
+  margin-bottom: 53px;
+}
+
+.areas-card-left{
+  width: 750px;
+  /* padding: 0 30px; */
+}
+
+.areas-card-left h1{
+  margin: 0 0 0 40px;
+  align-self: flex-start;
+  color: #2A3D4C;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 4px solid #5D9AAF;
+  padding-bottom: 4px;
+  /* padding-left: 4px; */
+}
+
+.areas-card-left p{
+  width: 670px;
+  margin: 14px 0 0 0;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #2A3D4C;
+}
+
+.areas-card img{
+  /* height: 230px; */
+  width: 200px;
+}
+
 /* Footer styles */
 footer{
   background-color: #2A3D4C;
