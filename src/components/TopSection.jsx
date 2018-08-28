@@ -10,7 +10,7 @@ const TopSection = ({ location }) =>{
           <Navbar variant="home" />
           <div className="top-section-text">
             <h1>Construyendo Soluciones</h1>
-            <p>Firma multidisciplinaria y especializada, con experiencia, tanto en la consultoria como en el litigio.</p>
+            <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p>
           </div>
         </div>
       </div>
