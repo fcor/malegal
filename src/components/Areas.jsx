@@ -4,12 +4,12 @@ import areas2 from '../assets/img/areas2.png'
 
 const cardDetails = [
   {
-    title: 'CORPORATIVO',
+    title: 'DERECHO CORPORATIVO',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin. Macaroon croissant muffin danish chupa chups. Jujubes sugar plum pastry danish brownie danish muffin caramels caramels. Lollipop bonbon cheesecake candy canes jelly tootsie roll biscuit.',
     img: areas1
   },
   {
-    title: 'FINANCIERO Y VALORES',
+    title: 'DERECHO FINANCIERO Y VALORES',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin. Macaroon croissant muffin danish chupa chups. Jujubes sugar plum pastry danish brownie danish muffin caramels caramels. Lollipop bonbon cheesecake candy canes jelly tootsie roll biscuit.',
     img: areas2
   },
@@ -20,11 +20,21 @@ const cardDetails = [
   },
 ]
 
-const Areas = () =>
-  <div className="container column">
-    <Header />
-    <Cards />
-  </div>
+class Areas extends React.Component {
+
+  componentDidMount(){
+    window.scrollTo(0, 0)
+  }
+
+  render() {
+    return(
+      <div className="container column">
+        <Header />
+        <Cards />
+      </div>
+    )
+  }
+}
 
 const Header = () =>
   <div className="areas-header column">

@@ -26,11 +26,21 @@ const getInputDetails = (type) => {
   }
 }
 
-const Trabajo = () =>
-  <div className="work-box row">
-    <WorkCard />
-    <WorkForm />
-  </div>
+class Trabajo extends React.Component {
+
+  componentDidMount(){
+    window.scrollTo(0, 0)
+  }
+
+  render() {
+    return(
+      <div className="work-box row">
+        <WorkCard />
+        <WorkForm />
+      </div>
+    )
+  }
+}
 
 const WorkCard = () =>
   <div className="work-card column">

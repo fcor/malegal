@@ -17,16 +17,25 @@ const getCardContent = (variant) =>{
   }
 }
 
-const About = () =>
-  <div className="about">
-    <div className="container">
-      <div className="about-box column">
-        <Text />
-        <Cards />
-        <CTA />
+class About extends React.Component {
+  componentDidMount(){
+    window.scrollTo(0, 0)
+  }
+  
+  render() {
+    return(
+      <div className="about">
+        <div className="container">
+          <div className="about-box column">
+            <Text />
+            <Cards />
+            <CTA />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    )
+  }
+}
 
 const Text = () =>
   <div className="about-header-text column">

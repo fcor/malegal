@@ -25,6 +25,10 @@ class Team extends React.Component {
     this.onClose = this.onClose.bind(this)
   }
 
+  componentDidMount(){
+    window.scrollTo(0, 0)
+  }
+
   onClick(member){
     // console.log(member);
     this.setState({
