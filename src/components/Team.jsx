@@ -48,20 +48,22 @@ class Team extends React.Component {
     const { isShowingDetails, member } = this.state
 
     return(
-      <div className="container">
-        <Rodal
-          visible={isShowingDetails}
-          onClose={this.onClose}
-          animation="slideDown"
-          width={725}
-          height={570}
-          >
-          <Modal name={member} />
-        </Rodal>
-        <div className="team-box column">
-          <Header />
-          <Cards onClick={this.onClick} />
-        </div>
+      <div className="team">
+        <div className="container">
+          <Rodal
+            visible={isShowingDetails}
+            onClose={this.onClose}
+            animation="slideDown"
+            width={725}
+            height={570}
+            >
+              <Modal name={member} />
+            </Rodal>
+            <div className="team-box column">
+              <Header />
+              <Cards onClick={this.onClick} />
+            </div>
+          </div>
       </div>
     )
   }

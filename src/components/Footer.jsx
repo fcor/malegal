@@ -29,7 +29,9 @@ const Footer = () =>
     <div className="container">
       <div className="footer-box column">
         <div className="footer-box-top row">
-          <Logo />
+          <div className="footer-logo">
+            <Logo />
+          </div>
           <ContactBox />
         </div>
         <Privacy />
@@ -52,13 +54,15 @@ const Privacy = () =>
 const Contact = () =>
   <div className="contact-box-left column">
     <p className="contact-box-title">CONTÁCTENOS</p>
-    <ContactDetail variant="address" />
-    <ContactDetail variant="phone" />
-    <ContactDetail variant="mail" />
+    <div className="contact-details">
+      <ContactDetail variant="address" />
+      <ContactDetail variant="phone" />
+      <ContactDetail variant="mail" />
+    </div>
   </div>
 
 const NavLinks = () =>
-<div>
+<div className="footer-navlinks">
   <p className="contact-box-title">LINKS</p>
   <Links variant="footer"/>
 </div>

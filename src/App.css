@@ -884,8 +884,11 @@ footer{
   margin: 0 0 10px 0;
 }
 
-.contact-detail{
-
+.contact-details{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .contact-detail-icon{
@@ -932,4 +935,67 @@ footer{
   font-weight: 400;
   font-size: 12px;
   color: #5D9AAF;
+}
+
+@media screen and (max-width: 1200px) {
+  footer{
+    background-color: white;
+  }
+  .footer-box{
+    /* border: 1px solid red; */
+    padding: 0;
+    margin-top: 20px;
+  }
+  .footer-logo,
+  .footer-navlinks{
+    display: none;
+  }
+  .footer-box-top{
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .contact-box{
+    padding-right: 0;
+  }
+  .contact-box-left{
+    margin-right: 0;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-detail{
+    flex-direction: column;
+    margin: 8px 0;
+  }
+  .privacy-box{
+    justify-content: center;
+    color: #2A3D4C;
+    border-top: 1px solid #2A3D4C;
+    text-align: center;
+    font-size: 9px;
+    height: 40px;
+  }
+  .team{
+    background-color: #F5F5F5
+  }
+  .contact-box-title{
+    color: #2A3D4C;
+    font-size: 28px;
+    font-weight: 600;
+    border-bottom: 3px solid #5D9AAF;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .contact-detail-text{
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 240px;
+    text-align: center;
+  }
+  .contact-details{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
