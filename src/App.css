@@ -606,6 +606,48 @@ body{
   text-align: justify;
 }
 
+@media screen and (max-width: 1080px) {
+  .team-cards{
+    grid-column-gap: 50px;
+    /* grid-row-gap: 25px; */
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .team-cards{
+    grid-column-gap: 25px;
+    /* grid-row-gap: 25px; */
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .team-cards{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-cards{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+  /* Here should go Rodal fix for mobile */
+}
+
+@media screen and (max-width: 630px) {
+  .team-cards{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team-cards{
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Trabajo Styles */
 .work-box{
   padding: 100px;
@@ -937,14 +979,34 @@ footer{
   color: #5D9AAF;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
+  .contact-box-left{
+    margin-right: 50px;
+  }
+
+  .footer-logo img{
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer-logo img{
+    width: 150px;
+  }
+  .contact-box{
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
   footer{
     background-color: white;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.19);
   }
   .footer-box{
     /* border: 1px solid red; */
     padding: 0;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .footer-logo,
   .footer-navlinks{
