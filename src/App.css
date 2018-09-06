@@ -613,10 +613,24 @@ body{
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1020px) {
+  .team{
+    background-color: #F5F5F5
+  }
+  .team-card{
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 10px 10px 14px 10px;
+    border-bottom: unset;
+  }
   .team-cards{
     grid-column-gap: 25px;
     /* grid-row-gap: 25px; */
+  }
+  .team-card-text{
+    width: 100%;
+    border-bottom: 3px solid #5D9AAF;
+    padding-bottom: 6px;
   }
 }
 
@@ -645,6 +659,10 @@ body{
 @media screen and (max-width: 600px) {
   .team-cards{
     grid-template-columns: 1fr;
+  }
+  .team-header{
+    width: 288px;
+    font-size: 28px;
   }
 }
 
@@ -1036,9 +1054,6 @@ footer{
     text-align: center;
     font-size: 9px;
     height: 40px;
-  }
-  .team{
-    background-color: #F5F5F5
   }
   .contact-box-title{
     color: #2A3D4C;
