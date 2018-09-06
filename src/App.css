@@ -187,6 +187,7 @@ body{
 /* fixed hamburger menu */
 .hamburger-box{
   position: absolute;
+  right: calc(5vw + 20px);
   /* background-color: white; */
   /* position: absolute;
   right: 5%;
@@ -309,11 +310,6 @@ body{
   display: none;
 }
 
-/* .menu-responsive{
-  display: none;
-  border: 1px solid blue;
-} */
-
 @media screen and (max-width: 950px) {
   body{
     width: 100vw;
@@ -343,7 +339,19 @@ body{
   .menu-responsive.active{
     right: 0;
   }
+  .navbar img{
+    width:160px;
+  }
+  .navbar {
+    padding: 10px 20px;
+    height: 50px;
+  }
+}
 
+@media screen and (max-width: 420px){
+  .navbar img{
+    width:130px;
+  }
 }
 
 /* About Styles */
@@ -627,7 +635,7 @@ body{
     grid-column-gap: 25px;
     /* grid-row-gap: 25px; */
   }
-  .team-card-text{
+  .team-card .team-card-text{
     width: 100%;
     border-bottom: 3px solid #5D9AAF;
     padding-bottom: 6px;
@@ -646,7 +654,14 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 40px;
   }
+}
+
+@media screen and (max-width: 767px) {
   /* Here should go Rodal fix for mobile */
+  .rodal,
+  .rodal-mask{
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 630px) {
