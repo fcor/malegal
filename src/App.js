@@ -43,7 +43,7 @@ class App extends Component {
                 <TransitionGroup exit={false}>
                   <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
                   <Switch location={location}>
-                    <Route exact path="/" render={() => <About lang={lang} />} />
+                    <Route exact path="/"  />
                     <Route path="/areas" render={() => <Areas  lang={lang} />} />
                     <Route path="/equipo" render={() => <Team lang={lang} />}/>
                     <Route path="/trabajo" render={() => <Trabajo lang={lang} />}/>

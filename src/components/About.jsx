@@ -24,14 +24,15 @@ class About extends React.Component {
 
   render() {
     return(
-      <div className="about">
-        <div className="container">
+      // <div className="about">
+      <div>
+        {/* <div className="container">
           <div className="about-box column">
             <Text />
             <Cards />
             <CTA />
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }

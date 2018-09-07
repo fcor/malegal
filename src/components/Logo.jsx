@@ -2,15 +2,18 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import logo from '../assets/img/logo.png'
+import logo2 from '../assets/img/logo2.png'
 
-const Logo = ({ variant }) =>{
+const getLogo = (type) => (type === "home") ? logo2 : logo
+
+const Logo = ({ variant, type }) =>{
   if (variant === 'link') {
     return(
       <NavLink
         exact
         to='/'
         >
-        <Img variant="logo"/>
+        <Img variant="logo" type={type} />
       </NavLink>
     )
   }
@@ -21,17 +24,19 @@ const Logo = ({ variant }) =>{
 
 const Img = (props) =>
   <img
-    src={logo}
+    src={getLogo(props.type)}
     alt="logo"
     className={props.variant}
   />
 
 Logo.defaultProps = {
-  variant: 'No'
+  variant: 'No',
+  type: 'normal'
 }
 
 Logo.propTypes = {
   variant: PropTypes.string,
+  type: PropTypes.string,
 }
 
 

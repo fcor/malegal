@@ -4,9 +4,9 @@ import Links from './Links'
 import Logo from './Logo'
 import Hamburger from './Hamburger'
 
-const Navbar = ({ variant }) =>
+const Navbar = ({ variant, type }) =>
   <div className={`navbar row ${variant}`}>
-    <Logo variant="link" />
+    <Logo variant="link" type={type} />
     <div className="navbar-desktop">
       <Links variant="navbar" />
     </div>

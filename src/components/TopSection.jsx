@@ -7,9 +7,9 @@ const TopSection = ({ location }) =>{
     return(
       <div className="top-section img">
         <div className="container">
-          <Navbar variant="home" />
-          <div className="top-section-text">
-            <h1>Construyendo Soluciones</h1>
+          <Navbar variant="home" type="home"  />
+          <div className="top-section-text column">
+            <h1>Construyendo soluciones</h1>
             <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p>
           </div>
         </div>
