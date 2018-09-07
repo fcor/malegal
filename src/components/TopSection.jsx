@@ -9,7 +9,10 @@ const TopSection = ({ location }) =>{
         <div className="container">
           <Navbar variant="home" type="home"  />
           <div className="top-section-text column">
-            <h1>Construyendo soluciones</h1>
+            <div className="top-section-box">
+              <div className="box"></div>
+              <h1>Construyendo soluciones</h1>
+            </div>
             <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p>
           </div>
         </div>

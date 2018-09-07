@@ -119,6 +119,19 @@ body{
   padding-left: 50px;
 }
 
+.top-section-box{
+  position: relative;
+}
+
+.box{
+  width: 8px;
+  height: 43px;
+  background-color: #5D9AAF;
+  position: absolute;
+  top: 16px;
+  left: -16px;
+}
+
 .top-section-text h1{
   color: #2A3D4C;
   font-family: 'Montserrat';
@@ -161,7 +174,8 @@ body{
 }
 
 .menu{
-  width: 561px;
+  /* width: 561px; */
+  width: 650px;
   justify-content: space-between;
   font-family: 'Montserrat';
   font-weight: 500;
@@ -173,6 +187,8 @@ body{
   color: #D5EDFF;
   /* letter-spacing: 2px; */
   transition: .2s;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .menu a:hover{
