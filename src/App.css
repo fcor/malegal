@@ -36,6 +36,10 @@ body{
   /* overflow: hidden; */
 }
 
+body.no-scroll{
+  overflow: hidden;
+}
+
 .fade-enter {
   opacity: 0;
   z-index: 1;
@@ -130,6 +134,7 @@ body{
   position: absolute;
   top: 16px;
   left: -16px;
+  z-index: 0;
 }
 
 .top-section-text h1{
@@ -358,19 +363,26 @@ body{
     display: inline;
   }
   .menu-responsive{
-    /* display: inline; */
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
     position: absolute;
     /* z-index: 1; */
     top: 0;
     right: -100%;
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: #2A3D4C;
     transition: 0.5s;
+    z-index: 1;
   }
-
   .menu-responsive.active{
     right: 0;
+  }
+  .menu-responsive-content{
+    flex: 1 0 auto;
+  }
+  .menu-responsive-footer{
+    flex-shrink: 0;
   }
   .navbar img{
     width:160px;

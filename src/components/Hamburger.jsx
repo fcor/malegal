@@ -25,6 +25,7 @@ class Hamburger extends React.Component {
     this.setState(
       ({active}) => ({active: !active}),
     )
+    document.body.classList.toggle('no-scroll')
   }
 
   render() {
@@ -48,7 +49,12 @@ const SideMenu = (props) => {
   const isActive = props.isActive ? 'active' : ''
   return(
     <div className={`menu-responsive ${isActive}`}>
-      Side Menu!
+      <div className="menu-responsive-content">
+        Conntent
+      </div>
+      <div className="menu-responsive-footer">
+        Footer
+      </div>
     </div>
   )
 }
