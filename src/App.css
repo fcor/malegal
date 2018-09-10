@@ -222,6 +222,20 @@ body.no-scroll{
   display: none;
 }
 
+.menu-side{
+  margin-top: 100px;
+}
+
+.menu-side a{
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 32px;
+  color: #D2EAFC;
+  margin: 30px 0;
+  height: 100%
+}
+
 /* fixed hamburger menu */
 .hamburger-box{
   position: absolute;
@@ -413,9 +427,44 @@ body.no-scroll{
   }
 }
 
+@media screen and (max-width: 550px){
+  .menu-responsive-content img{
+    width: 200px !important;
+  }
+  .menu-side{
+    margin-top: 70px;
+  }
+  .menu-side a{
+    font-size: 25px;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 470px){
+  .menu-responsive-footer{
+    font-size: 10px;
+  }
+}
+
 @media screen and (max-width: 420px){
   .navbar img{
     width:130px;
+  }
+  .menu-responsive-footer{
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .menu-responsive-footer{
+    font-size: 8px;
+  }
+  .menu-side{
+    margin-top: 80px;
+  }
+  .menu-side a{
+    font-size: 22px;
+    margin: 8px 0;
   }
 }
 
@@ -1093,20 +1142,6 @@ footer{
   color: #5D9AAF;
   /* letter-spacing: 2px; */
   margin: 8px 0;
-}
-
-.menu-side{
-  margin-top: 100px;
-}
-
-.menu-side a{
-  font-family: 'Roboto';
-  font-weight: 400;
-  text-decoration: none;
-  font-size: 32px;
-  color: #D2EAFC;
-  margin: 30px 0;
-  height: 100%
 }
 
 .privacy-box{
