@@ -1,24 +1,7 @@
 import React from 'react'
-import areas1 from '../assets/img/areas1.png'
-import areas2 from '../assets/img/areas2.png'
-
-const cardDetails = [
-  {
-    title: 'DERECHO CORPORATIVO',
-    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin. Macaroon croissant muffin danish chupa chups. Jujubes sugar plum pastry danish brownie danish muffin caramels caramels. Lollipop bonbon cheesecake candy canes jelly tootsie roll biscuit.',
-    img: areas1
-  },
-  {
-    title: 'DERECHO FINANCIERO Y VALORES',
-    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin. Macaroon croissant muffin danish chupa chups. Jujubes sugar plum pastry danish brownie danish muffin caramels caramels. Lollipop bonbon cheesecake candy canes jelly tootsie roll biscuit.',
-    img: areas2
-  },
-  {
-    title: 'DERECHO LABORAL Y SEGURIDAD SOCIAL',
-    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin. Macaroon croissant muffin danish chupa chups. Jujubes sugar plum pastry danish brownie danish muffin caramels caramels. Lollipop bonbon cheesecake candy canes jelly tootsie roll biscuit.',
-    img: areas1
-  },
-]
+// import areas1 from '../assets/img/areas1.png'
+// import areas2 from '../assets/img/areas2.png'
+import { areas } from '../utils/areas.js'
 
 class Areas extends React.Component {
 
@@ -45,21 +28,26 @@ const Header = () =>
   </div>
 
 const Cards = () =>
-  cardDetails.map((item) => {
+  areas.map((item) => {
     return (
       <div className="areas-card row" key={item.title}>
         <div className="areas-card-left column">
           <h1>
             {item.title}
           </h1>
+        </div>
+        <div className="areas-card-right column">
           <p>
             {item.text}
           </p>
+          <ul>
+            {item.bullets.map((bullet) => {
+              return (
+                  <li>{bullet}</li>
+              )
+            })}
+          </ul>
         </div>
-        <img
-          src={item.img}
-          alt="area"
-        />
       </div>
     )
   })
