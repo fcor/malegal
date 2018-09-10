@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
+import Links from './Links'
 
 const getAnimationCS = (isActive) => {
   if (isActive === null) {
@@ -39,7 +40,7 @@ class Hamburger extends React.Component {
             <div className={`bar-menu b3 ${getAnimationCS(active)}`}></div>
           </div>
         </div>
-        <SideMenu isActive={active} />
+        <SideMenu isActive={active} onClickMobile={this.handleClick} />
       </div>
     )
   }
@@ -50,10 +51,11 @@ const SideMenu = (props) => {
   return(
     <div className={`menu-responsive ${isActive}`}>
       <div className="menu-responsive-content">
-        Conntent
+        <Logo />
+        <Links variant="side" onClick={props.onClickMobile} />
       </div>
       <div className="menu-responsive-footer">
-        Footer
+        Política de privacidad | © 2018 Malegal. Todos los derechos reservados.
       </div>
     </div>
   )

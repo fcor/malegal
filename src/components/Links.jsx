@@ -6,33 +6,40 @@ const getCs = (variant) => {
   if (variant === 'navbar') {
     return "menu row"
   }
-  return "menu-footer column"
+  else if(variant === 'footer'){
+    return "menu-footer column"
+  }
+  else return "menu-side column"
 }
 
-const Links = ({ variant }) =>
+const Links = ({ variant, onClick }) =>
   <div className={getCs(variant)}>
     <NavLink
       exact
       to='/'
       activeClassName="selected"
+      onClick={onClick}
       >
       Nosotros
     </NavLink>
     <NavLink
       to='/areas'
       activeClassName="selected"
+      onClick={onClick}
       >
         Áreas de práctica
     </NavLink>
     <NavLink
       to='/equipo'
       activeClassName="selected"
+      onClick={onClick}
       >
       Equipo
     </NavLink>
     <NavLink
       to='/trabajo'
       activeClassName="selected"
+      onClick={onClick}
       >
       Trabaje con nosotros
     </NavLink>
@@ -40,6 +47,11 @@ const Links = ({ variant }) =>
 
 Links.propTypes = {
   variant: PropTypes.string.isRequired,
+  onClick: PropTypes.func
 }
+
+Links.defaultProps = {
+  onClick: () => {}
+};
 
 export default Links

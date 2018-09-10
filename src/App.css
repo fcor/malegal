@@ -364,6 +364,8 @@ body.no-scroll{
   }
   .menu-responsive{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
@@ -380,9 +382,27 @@ body.no-scroll{
   }
   .menu-responsive-content{
     flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .menu-responsive-content img{
+    width: 300px !important;
   }
   .menu-responsive-footer{
     flex-shrink: 0;
+    /* margin: 0 20px; */
+    width: 95%;
+    height: 30px;
+    border-top: 1px solid #D2EAFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 12px;
+    color: #D2EAFC;
   }
   .navbar img{
     width:160px;
@@ -1073,6 +1093,20 @@ footer{
   color: #5D9AAF;
   /* letter-spacing: 2px; */
   margin: 8px 0;
+}
+
+.menu-side{
+  margin-top: 100px;
+}
+
+.menu-side a{
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 32px;
+  color: #D2EAFC;
+  margin: 30px 0;
+  height: 100%
 }
 
 .privacy-box{
