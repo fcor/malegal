@@ -1,6 +1,4 @@
 import React from 'react'
-// import areas1 from '../assets/img/areas1.png'
-// import areas2 from '../assets/img/areas2.png'
 import { areas } from '../utils/areas.js'
 
 class Areas extends React.Component {
@@ -35,6 +33,13 @@ const Cards = () =>
           <h1>
             {item.title}
           </h1>
+          <p>¿Tienes mas preguntas?
+            <span>
+              <a href="mailto:administrativo@malegal.co">
+                Contáctanos.
+              </a>
+            </span>
+          </p>
         </div>
         <div className="areas-card-right column">
           <p>

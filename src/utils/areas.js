@@ -15,7 +15,7 @@ export const areas = [
     ]
   },
   {
-    title: 'Derecho Financiero y del Mercado de Valores',
+    title: 'Derecho Financiero y Derecho del Mercado de Valores',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
     bullets: [
       'Defensa del consumidor financiero',
