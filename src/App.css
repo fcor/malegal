@@ -264,16 +264,24 @@ body.no-scroll{
   height: 3px;
   background: white;
   border-radius: 10px;
+  transition: all .5s;
+}
+
+.bar-menu.home{
+  background: #2A3D4C;
 }
 
 .b1.active{
   animation: bar1in .5s forwards;
+  background: white;
 }
 .b2.active{
   animation: bar2in .5s forwards;
+  background: white;
 }
 .b3.active{
   animation: bar3in .5s forwards;
+  background: white;
 }
 
 .b1.inactive{

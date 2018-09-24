@@ -10,7 +10,7 @@ const Navbar = ({ variant, type }) =>
     <div className="navbar-desktop">
       <Links variant="navbar" />
     </div>
-    <Hamburger />
+    <Hamburger variant={type} />
   </div>
 
 Navbar.propTypes = {

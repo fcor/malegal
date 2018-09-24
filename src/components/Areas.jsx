@@ -48,7 +48,7 @@ const Cards = () =>
           <ul>
             {item.bullets.map((bullet) => {
               return (
-                  <li>{bullet}</li>
+                  <li key={bullet}>{bullet}</li>
               )
             })}
           </ul>

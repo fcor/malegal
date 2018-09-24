@@ -12,6 +12,8 @@ const getAnimationCS = (isActive) => {
   }
 }
 
+const getColor = (type) => type === 'home' ? 'home' : ''
+
 class Hamburger extends React.Component {
   constructor(props){
     super(props)
@@ -31,13 +33,14 @@ class Hamburger extends React.Component {
 
   render() {
     const { active } = this.state
+    const { variant } = this.props
     return(
       <div className="side-menu">
         <div className={`hamburger-menu`} onClick={this.handleClick} >
           <div className="hamburger-box" >
-            <div className={`bar-menu b1 ${getAnimationCS(active)}`}></div>
-            <div className={`bar-menu b2 ${getAnimationCS(active)}`}></div>
-            <div className={`bar-menu b3 ${getAnimationCS(active)}`}></div>
+            <div className={`bar-menu b1 ${getColor(variant)} ${getAnimationCS(active)}`}></div>
+            <div className={`bar-menu b2 ${getColor(variant)} ${getAnimationCS(active)}`}></div>
+            <div className={`bar-menu b3 ${getColor(variant)} ${getAnimationCS(active)}`}></div>
           </div>
         </div>
         <SideMenu isActive={active} onClickMobile={this.handleClick} />
