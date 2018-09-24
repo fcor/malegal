@@ -391,7 +391,7 @@ body.no-scroll{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    position: fixed;
+    position: absolute;
     /* z-index: 1; */
     top: 0;
     right: -100%;
@@ -1171,6 +1171,114 @@ transform: scale(.9);
 .areas-card img{
   /* height: 230px; */
   width: 200px;
+}
+
+@media screen and (max-width: 1050px) {
+  .areas-card-left{
+    margin-right: 20px;
+  }
+  .areas-header p{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .areas-card{
+    width: unset;
+  }
+  .areas-card-right{
+    width: 450px;
+  }
+  .areas-header p{
+    width: 590px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .areas-card{
+    flex-direction: column;
+  }
+  .areas-card-left{
+    width: unset;
+    align-self: flex-start;
+  }
+  .areas-card-left p{
+    display: none;
+  }
+  .areas-card-left h1{
+    margin-bottom: 20px;
+    /* width: unset; */
+    /* text-align: center;    */
+  }
+  .areas-header{
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .areas-header p{
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .areas-header h1{
+    font-size: 30px;
+    width: 450px;
+  }
+  .areas-header p{
+    font-size: 16px;
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .areas-header h1{
+    font-size: 28px;
+    width: 400px;
+  }
+  .areas-header p{
+    font-size: 15px;
+    width: 400px;
+  }
+  .areas-card-right{
+    width: 400px;
+  }
+  .areas-card-left h1{
+    font-size: 22px;
+  }
+  .areas-card-right p{
+    font-size: 12px;
+  }
+  .areas-card-right ul li{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .areas-header{
+    margin-top: 45px;
+  }
+  .areas-header h1{
+    font-size: 26px;
+    width: 300px;
+  }
+  .areas-header p{
+    font-size: 14px;
+    width: 300px;
+  }
+  .areas-card-right{
+    width: 300px;
+  }
+  .areas-card-left h1{
+    font-size: 20px;
+  }
+  .areas-card-right p{
+    font-size: 11px;
+  }
+  .areas-card-right ul li{
+    font-size: 11px;
+  }
 }
 
 /* Footer styles */
