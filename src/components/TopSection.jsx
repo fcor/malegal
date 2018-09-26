@@ -13,7 +13,7 @@ const TopSection = ({ location }) =>{
               <div className="box"></div>
               <h1>Construyendo soluciones</h1>
             </div>
-            <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p>
+            {/* <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p> */}
           </div>
         </div>
       </div>

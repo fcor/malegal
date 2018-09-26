@@ -33,13 +33,13 @@ const Cards = () =>
           <h1>
             {item.title}
           </h1>
-          <p>¿Tienes mas preguntas?
+          {/* <p>¿Tienes mas preguntas?
             <span>
               <a href="mailto:administrativo@malegal.co">
                 Contáctanos.
               </a>
             </span>
-          </p>
+          </p> */}
         </div>
         <div className="areas-card-right column">
           <p>
