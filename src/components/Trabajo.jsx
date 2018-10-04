@@ -48,13 +48,10 @@ const WorkCard = () =>
       TRABAJA CON NOSOTROS
     </header>
     <p>
-      Toffee chocolate gingerbread gingerbread halvah chocolate tiramisu marzipan pie. Cake carrot cake cookie tiramisu pie candy canes. I love croissant donut chocolate cake I love topping. Danish chupa chups jelly beans pudding.
-      <br/>
-      <br/>
-      Toffee chocolate gingerbread gingerbread halvah chocolate tiramisu marzipan pie. Cake carrot cake cookie tiramisu pie candy canes. I love croissant donut chocolate cake I love topping. Danish chupa chups jelly beans pudding.
+      En Muñoz Aya Legal buscamos personas comprometidas con el conocimiento y la excelencia, que busquen un espacio  para aprender y crecer junto a nosotros.  Si quieres ser parte de nuestro equipo, envíanos tu hoja de vida y nos pondremos en contacto contigo.
     </p>
     <h2>
-      LLENA Y ENVIANOS EL FORMULARIO CON TU CV
+      LLENA Y ENVÍANOS EL FORMULARIO CON TU CV
     </h2>
     <SVG />
   </div>

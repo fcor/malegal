@@ -42,9 +42,9 @@ const Cards = () =>
           </p> */}
         </div>
         <div className="areas-card-right column">
-          <p>
+          {/* <p>
             {item.text}
-          </p>
+          </p> */}
           <ul>
             {item.bullets.map((bullet) => {
               return (
