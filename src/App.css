@@ -1167,6 +1167,38 @@ transform: scale(.9);
   }
 }
 
+@media screen and (max-width: 380px) {
+  .work-card{
+    width: 280px;
+    height: 400px;
+  }
+  .work-form{
+    width: 280px;
+  }
+  .work-form-input,
+  .work-form-submit,
+  .work-form-textarea,
+  .work-form-textarea textarea{
+    width: 240px;
+  }
+  .work-form-input input{
+    width: 230px;
+  }
+  .work-card header{
+    font-size: 24px;
+  }
+  .work-card p{
+    font-size: 13px;
+  }
+  .work-card h2{
+    font-size: 14px;
+  }
+  .work-form header{
+    padding: 30px 0 30px 30px;
+    width: unset;
+  }
+}
+
 /* Areas Styles */
 .areas-header{
   margin: 70px 0;
@@ -1336,7 +1368,7 @@ transform: scale(.9);
   }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .areas-header h1{
     font-size: 30px;
     width: 450px;
@@ -1345,7 +1377,7 @@ transform: scale(.9);
     font-size: 16px;
     width: 450px;
   }
-}
+} */
 
 @media screen and (max-width: 510px) {
   .areas-header h1{
@@ -1384,6 +1416,32 @@ transform: scale(.9);
   }
   .areas-card-right{
     width: 300px;
+  }
+  .areas-card-left h1{
+    font-size: 20px;
+  }
+  .areas-card-right p{
+    font-size: 11px;
+  }
+  .areas-card-right ul li{
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .areas-header{
+    margin-top: 40px;
+  }
+  .areas-header h1{
+    font-size: 24px;
+    width: 270px;
+  }
+  .areas-header p{
+    font-size: 13px;
+    width: 270px;
+  }
+  .areas-card-right{
+    width: 270px;
   }
   .areas-card-left h1{
     font-size: 20px;
