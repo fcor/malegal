@@ -1060,6 +1060,9 @@ transform: scale(.9);
   .work-card h2{
     font-size: 20px;
   }
+  .work-form-textarea textarea{
+    background-color: #F5F5F5;
+  }
 }
 
 @media screen and (max-width: 1150px) {
