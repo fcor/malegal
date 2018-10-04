@@ -37,7 +37,9 @@ body{
 }
 
 body.no-scroll{
-  overflow: hidden;
+  /* height: 100vh; */
+  overflow-y: hidden;
+  /* background-color: red; */
 }
 
 .fade-enter {
