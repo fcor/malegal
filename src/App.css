@@ -723,6 +723,10 @@ body.no-scroll{
   font-size: 19px;
 }
 
+.team-card-text.small h1 {
+  font-size: 18px;
+}
+
 .team-card-text p {
   margin: 3px 0 0 0;
   color: #2A3D4C;

@@ -2,7 +2,6 @@ import React from 'react'
 import Rodal from 'rodal';
 import getMemberInfo from '../utils/team.js'
 import 'rodal/lib/rodal.css'
-import avatar from '../assets/img/manLarge.png'
 import mail from '../assets/img/mail.png'
 
 const teamMembers = ['Daniela',
@@ -105,7 +104,7 @@ const Modal = ({ name }) => {
     <div className="team-modal row">
       <div className="modal-left column">
         <img
-          src={avatar}
+          src={member.modal}
           alt="avatar"
           className="modal-avatar"
         />
@@ -139,14 +138,21 @@ const Modal = ({ name }) => {
   )
 }
 
-const MemberText = ({name, position, variant}) =>
-<div className={`team-card-text ${variant}`}>
-  <h1>
-    {name}
-  </h1>
-  <p>
-    {position}
-  </p>
-</div>
+const MemberText = ({name, position, variant}) => {
+  let fontSize = ''
+  if (name === 'Daniela Guerrero Ordoñez' && variant === 'modal') {
+    fontSize = 'small'
+  }
+  return(
+    <div className={`team-card-text ${variant} ${fontSize}`}>
+      <h1>
+        {name}
+      </h1>
+      <p>
+        {position}
+      </p>
+    </div>
+  )
+}
 
 export default Team
