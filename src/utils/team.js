@@ -8,6 +8,8 @@ import nataliaSmall from '../assets/img/natalia_small.jpg'
 import nataliaModal from '../assets/img/natalia_modal.jpg'
 import danielaSmall from '../assets/img/daniela_small.jpg'
 import danielaModal from '../assets/img/daniela_modal.jpg'
+import edgarSmall from '../assets/img/edgar_small.jpg'
+import edgarModal from '../assets/img/edgar_modal.jpg'
 import manLarge from '../assets/img/manLarge.png'
 
 
@@ -52,8 +54,8 @@ const getMemberInfo = (name) => {
     return {
       name: 'Edgar Muñoz',
       position: 'Socio',
-      avatar: man,
-      modal: manLarge,
+      avatar: edgarSmall,
+      modal: edgarModal,
       email: 'edgar@malegal.co',
       bio: 'Abogado, LLM, MBA, con más de 18 años de experiencia en temas relacionados con inversiones, derecho corporativo, bancario, y de valores, banca de inversión, fondos de inversión colectiva y fondos de capital privado; operaciones de tesorería y negociación de créditos sindicados. Cuenta con una amplia experiencia profesional en estos campos, tanto en el sector público como privado a través de su vinculación a firmas de abogados de primer nivel global y local, Citibank, Davivienda, y el Ministerio de Hacienda y Crédito Público, entre otros.'
     }
