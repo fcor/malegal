@@ -32,11 +32,51 @@ class Trabajo extends React.Component {
     window.scrollTo(0, 0)
   }
 
+  handleSubmit(){
+    fetch('https://us-central1-malegal-dabd2.cloudfunctions.net/sendMail',{
+      method: "POST",
+      body:'{"name": "Fabio"}',
+      headers: {
+        "Content-Type": "application/json"
+        }
+      }
+    )
+      .then(function(response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+      })
+  }
+
+  handleSelectedFile(e){
+    e.preventDefault();
+    const file = e.target.files[0]
+    const data = new FormData()
+    data.append('upload', file)
+    fetch('http://killpop-api.glitch.me/uploadFile', {
+      method: 'POST',
+      body: data // This is your file object
+      }).then(
+        response => console.log(response)
+        // response.json() // if the response is a JSON object
+      ).then(
+        success => console.log(success) // Handle the success response object
+      ).catch(
+        error => console.log(error) // Handle the error response object
+      )
+
+  }
+
   render() {
     return(
       <div className="work-box row">
         <WorkCard />
-        <WorkForm />
+        <WorkForm
+          handleSubmit={this.handleSubmit}
+          handleSelectedFile={this.handleSelectedFile}
+        />
       </div>
     )
   }
@@ -56,7 +96,7 @@ const WorkCard = () =>
     <SVG />
   </div>
 
-const WorkForm = () =>
+const WorkForm = ({handleSubmit, handleSelectedFile}) =>
   <div className="work-form">
     <div className="rect"></div>
     <header>FORMULARIO</header>
@@ -64,9 +104,9 @@ const WorkForm = () =>
       <Input variant="name" />
       <Input variant="email" />
       <Input variant="phone" />
-      <Submit />
+      <Submit handleSelectedFile={handleSelectedFile}  />
       <TextArea />
-      <button className="submit">
+      <button onClick={handleSubmit} className="submit">
         ENVIAR
       </button>
     </div>
@@ -88,12 +128,18 @@ const Input = ({variant}) => {
   )
 }
 
-const Submit = () =>
+const Submit = ({handleSelectedFile}) =>
   <div className="work-form-submit column">
     <p className="work-form-labels">
       ADJUNTA TU CV
     </p>
+    <input  type="file" name="upload" onChange={handleSelectedFile} />
     <button>Adjuntar archivo</button>
+    {/* <form method="post" enctype="multipart/form-data" action="http://killpop-api.glitch.me/uploadFile">
+      <label for="file">Upload a file</label>
+      <input type="file" name="upload"/>
+      <input type="submit" class="button"/>
+    </form> */}
   </div>
 
 const TextArea = () =>
