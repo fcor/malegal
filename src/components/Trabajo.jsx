@@ -27,6 +27,21 @@ const getInputDetails = (type) => {
 }
 
 class Trabajo extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      isFileLoaded: false,
+      isLoadingFile: null,
+      fileName: '',
+      text: ''
+    }
+    this.handleSelectedFile = this.handleSelectedFile.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.uploadFile = this.uploadFile.bind(this)
+  }
 
   componentDidMount(){
     window.scrollTo(0, 0)
@@ -50,32 +65,48 @@ class Trabajo extends React.Component {
       })
   }
 
-  handleSelectedFile(e){
-    e.preventDefault();
-    const file = e.target.files[0]
+  uploadFile(file){
     const data = new FormData()
     data.append('upload', file)
     fetch('http://killpop-api.glitch.me/uploadFile', {
       method: 'POST',
-      body: data // This is your file object
+      body: data 
       }).then(
-        response => console.log(response)
-        // response.json() // if the response is a JSON object
+        response => response.json() // if the response is a JSON object
       ).then(
-        success => console.log(success) // Handle the success response object
+        success => {
+          console.log(success) // Handle the success response object
+          this.setState({
+            isLoadingFile: false,
+            isFileLoaded: true,
+            fileName: file.name
+          })
+        }
       ).catch(
         error => console.log(error) // Handle the error response object
       )
+  }
 
+  handleSelectedFile(e){
+    e.preventDefault();
+    const file = e.target.files[0]
+    
+    this.setState(() => {
+      return {isLoadingFile: true, isFileLoaded:false}
+    }, () => this.uploadFile(file))
   }
 
   render() {
+    const { isFileLoaded, fileName, isLoadingFile } = this.state
     return(
       <div className="work-box row">
         <WorkCard />
         <WorkForm
           handleSubmit={this.handleSubmit}
           handleSelectedFile={this.handleSelectedFile}
+          isFileLoaded={isFileLoaded}
+          isLoadingFile={isLoadingFile}
+          fileName={fileName}
         />
       </div>
     )
@@ -96,7 +127,7 @@ const WorkCard = () =>
     <SVG />
   </div>
 
-const WorkForm = ({handleSubmit, handleSelectedFile}) =>
+const WorkForm = ({handleSubmit, handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
   <div className="work-form">
     <div className="rect"></div>
     <header>FORMULARIO</header>
@@ -104,7 +135,12 @@ const WorkForm = ({handleSubmit, handleSelectedFile}) =>
       <Input variant="name" />
       <Input variant="email" />
       <Input variant="phone" />
-      <Submit handleSelectedFile={handleSelectedFile}  />
+      <Submit 
+        handleSelectedFile={handleSelectedFile} 
+        isFileLoaded={isFileLoaded}
+        isLoadingFile={isLoadingFile}
+        fileName={fileName}
+      />
       <TextArea />
       <button onClick={handleSubmit} className="submit">
         ENVIAR
@@ -128,18 +164,28 @@ const Input = ({variant}) => {
   )
 }
 
-const Submit = ({handleSelectedFile}) =>
+const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
   <div className="work-form-submit column">
     <p className="work-form-labels">
       ADJUNTA TU CV
     </p>
-    <input  type="file" name="upload" onChange={handleSelectedFile} />
-    <button>Adjuntar archivo</button>
-    {/* <form method="post" enctype="multipart/form-data" action="http://killpop-api.glitch.me/uploadFile">
-      <label for="file">Upload a file</label>
-      <input type="file" name="upload"/>
-      <input type="submit" class="button"/>
-    </form> */}
+    <div className="row">
+      <label htmlFor="file-upload">
+        Adjuntar archivo
+      </label>
+      <input 
+        id="file-upload" 
+        type="file" 
+        name="upload" 
+        onChange={handleSelectedFile} 
+      />
+      {isLoadingFile &&
+        <p className="file">Cargando...</p>
+      }
+      {isFileLoaded &&
+        <p className="file">{fileName}</p>
+      }
+    </div>
   </div>
 
 const TextArea = () =>
