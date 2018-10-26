@@ -41,6 +41,7 @@ class Trabajo extends React.Component {
     this.handleSelectedFile = this.handleSelectedFile.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.uploadFile = this.uploadFile.bind(this)
+    this.handleTyping = this.handleTyping.bind(this)
   }
 
   componentDidMount(){
@@ -87,6 +88,12 @@ class Trabajo extends React.Component {
       )
   }
 
+  handleTyping(e, field){
+    this.setState({
+      [field]: e.target.value
+    })
+  }
+
   handleSelectedFile(e){
     e.preventDefault();
     const file = e.target.files[0]
@@ -97,16 +104,21 @@ class Trabajo extends React.Component {
   }
 
   render() {
-    const { isFileLoaded, fileName, isLoadingFile } = this.state
+    const { isFileLoaded, fileName, isLoadingFile, name, email, phone, text } = this.state
     return(
       <div className="work-box row">
         <WorkCard />
         <WorkForm
           handleSubmit={this.handleSubmit}
           handleSelectedFile={this.handleSelectedFile}
+          handleTyping={this.handleTyping}
           isFileLoaded={isFileLoaded}
           isLoadingFile={isLoadingFile}
           fileName={fileName}
+          name={name}
+          email={email}
+          phone={phone}
+          text={text}
         />
       </div>
     )
@@ -127,28 +139,28 @@ const WorkCard = () =>
     <SVG />
   </div>
 
-const WorkForm = ({handleSubmit, handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
+const WorkForm = ({handleSubmit, handleTyping, handleSelectedFile, isLoadingFile, isFileLoaded, fileName, name, mail, phone, text}) =>
   <div className="work-form">
     <div className="rect"></div>
     <header>FORMULARIO</header>
     <div className="column">
-      <Input variant="name" />
-      <Input variant="email" />
-      <Input variant="phone" />
+      <Input variant="name" value={name} handleTyping={handleTyping} />
+      <Input variant="email" value={mail} handleTyping={handleTyping} />
+      <Input variant="phone" value={phone} handleTyping={handleTyping} />
       <Submit 
         handleSelectedFile={handleSelectedFile} 
         isFileLoaded={isFileLoaded}
         isLoadingFile={isLoadingFile}
         fileName={fileName}
       />
-      <TextArea />
+      <TextArea value={text}  handleTyping={handleTyping}/>
       <button onClick={handleSubmit} className="submit">
         ENVIAR
       </button>
     </div>
   </div>
 
-const Input = ({variant}) => {
+const Input = ({variant, handleTyping, value}) => {
   const input = getInputDetails(variant)
   return(
     <div className="work-form-input column">
@@ -159,6 +171,8 @@ const Input = ({variant}) => {
         type={input.type}
         placeholder={input.placeholder}
         id={input.id}
+        value={value}
+        onChange={(e)=> handleTyping(e, variant)}
       />
     </div>
   )
@@ -188,13 +202,15 @@ const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
     </div>
   </div>
 
-const TextArea = () =>
+const TextArea = ({handleTyping, value}) =>
   <div className="work-form-textarea column">
     <label htmlFor="textarea" className="work-form-labels">
       ¿POR QUÉ QUIERES UNIRTE A NOSOTROS?
     </label>
     <textarea
       id="textarea"
+      value={value}
+      onChange={(e)=> handleTyping(e, "text")}
     />
   </div>
 
