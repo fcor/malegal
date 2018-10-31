@@ -1649,3 +1649,17 @@ footer{
     width: 240px;
   }
 }
+
+.swal2-popup{
+  font-family: 'Montserrat';
+  color: #2A3D4C !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm{
+  background-color: #5D9AAF;
+  color: #D2EAFC;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: none;
+}

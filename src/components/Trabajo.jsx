@@ -1,5 +1,6 @@
 import React from 'react'
 import SVG from './SVG'
+import swal from 'sweetalert2'
 
 const getInputDetails = (type) => {
   if (type === 'name') {
@@ -42,13 +43,14 @@ class Trabajo extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.uploadFile = this.uploadFile.bind(this)
     this.handleTyping = this.handleTyping.bind(this)
+    this.sendMail = this.sendMail.bind(this)
   }
 
   componentDidMount(){
     window.scrollTo(0, 0)
   }
 
-  handleSubmit(){
+  sendMail(){
     fetch('https://us-central1-malegal-dabd2.cloudfunctions.net/sendMail',{
       method: "POST",
       body:'{"name": "Fabio"}',
@@ -63,7 +65,29 @@ class Trabajo extends React.Component {
       })
       .then(function(myJson) {
         console.log(myJson);
+        swal({
+          title: "Perfecto!",
+          text: "Tu mensaje se ha enviado!",
+          type: "success",
+          confirmButtonText: 'Ok',
+        })
       })
+  }
+
+  handleSubmit(){
+    const { name, email, phone, fileName, text } = this.state
+    if(name && email && phone && fileName && text){
+      // console.log('Send email')
+      this.sendMail()
+    } else{
+      // console.log('Cannot send email')
+      swal({
+        title: "Oops :(",
+        text: "Llena todos los campos para continuar!",
+        type: "error",
+        confirmButtonText: 'Ok',
+      })
+    }
   }
 
   uploadFile(file){

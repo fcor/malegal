@@ -10,7 +10,8 @@
     "react-router-dom": "^4.3.1",
     "react-scrolllock": "^3.0.2",
     "react-transition-group": "^2.4.0",
-    "rodal": "^1.6.3"
+    "rodal": "^1.6.3",
+    "sweetalert2": "^7.28.11"
   },
   "devDependencies": {
     "react-scripts": "1.1.4"
