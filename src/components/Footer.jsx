@@ -60,7 +60,7 @@ const ContactBox = () =>
 
 const Privacy = () =>
   <div className="privacy-box">
-    Política de privacidad | © 2018 Malegal. Todos los derechos reservados.
+    Política de privacidad | © 2018 Muñoz Aya. Todos los derechos reservados.
   </div>
 
 const Contact = () =>
