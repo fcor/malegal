@@ -166,7 +166,7 @@ body.no-scroll{
 }
 
 .navbar.home .menu{
-  width: 650px;
+  width: 530px;
 }
 
 .navbar.home .menu a{
@@ -178,7 +178,7 @@ body.no-scroll{
 
 .menu{
   /* width: 561px; */
-  width: 650px;
+  width: 530px;
   justify-content: space-between;
   font-family: 'Montserrat';
   font-weight: 500;
@@ -1250,11 +1250,15 @@ transform: scale(.9);
   /* border: 1px solid red; */
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+  min-height: 100%;
   width: 300px;
   margin-right: 80px;
   /* padding: 0 30px; */
 }
+
+/* .areas-card-left:nth-child(1){
+  border: 1px solid red;
+} */
 
 .areas-card-left h1{
   margin: 0;

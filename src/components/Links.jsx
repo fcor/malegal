@@ -14,14 +14,14 @@ const getCs = (variant) => {
 
 const Links = ({ variant, onClick }) =>
   <div className={getCs(variant)}>
-    <NavLink
+    {/* <NavLink
       exact
       to='/'
       activeClassName="selected"
       onClick={onClick}
       >
       Nosotros
-    </NavLink>
+    </NavLink> */}
     <NavLink
       to='/areas'
       activeClassName="selected"

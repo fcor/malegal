@@ -15,7 +15,7 @@ export const areas = [
     ]
   },
   {
-    title: 'Derecho Financiero y Derecho del Mercado de Valores',
+    title: 'Derecho Financiero y del Mercado de Valores',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
     bullets: [
       'Defensa del consumidor financiero',
@@ -24,7 +24,8 @@ export const areas = [
       'Estructuración y revisión de contratos',
       'Due Diligence',
       'Compliance y relación con las autoridades de vigilancia, inspección y control',
-      'Estructuración de operaciones con contratos derivados',
+      'Estructuración de operaciones con derivados financieros (ISDAS y contratos marco)',
+      'Emisiones de valores',
       'Constitución de garantías mobiliarias e inmobiliarias',
       'Asesoría en financiación de infraestructura',
       'Trámites y asesorías con relación a titularizaciones, emisiones y ofertas públicas de adquisición',
