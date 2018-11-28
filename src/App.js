@@ -7,15 +7,20 @@ import About from './components/About'
 import Team from './components/Team'
 import Areas from './components/Areas'
 import Trabajo from './components/Trabajo'
+import Datos from './components/Datos'
 import './App.css'
+import Rodal from 'rodal';
+import 'rodal/lib/rodal.css'
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
       lang: 'es',
+      isModalOpen: false
     }
     this.handleLang = this.handleLang.bind(this)
+    this.handleModal = this.handleModal.bind(this)
   }
 
   handleLang(newLang){
@@ -28,12 +33,29 @@ class App extends Component {
       }
     })
   }
+
+  handleModal(){
+    const { isModalOpen } = this.state
+    this.setState({
+      isModalOpen: !isModalOpen,
+    })
+  }
+
   render() {
-    const { lang } = this.state
+    const { lang, isModalOpen } = this.state
     return (
         <Router>
           <div className="app">
             <div className="content">
+              <Rodal
+                visible={isModalOpen}
+                onClose={this.handleModal}
+                animation="slideDown"
+                width={725}
+                height={630}
+                >
+                  <Datos />
+                </Rodal>
               <Route render={ (props) => {
                 return (
                   <TopSection location={props.location.pathname} lang={lang} />
@@ -53,7 +75,9 @@ class App extends Component {
                 </TransitionGroup>
               }/>
             </div>
-            <Footer />
+            <Footer 
+              handleModal={this.handleModal}
+             />
           </div>
         </Router>
 

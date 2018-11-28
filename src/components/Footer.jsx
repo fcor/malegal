@@ -36,7 +36,7 @@ const getContactDetails = (variant) => {
   }
 }
 
-const Footer = () =>
+const Footer = ({handleModal}) =>
   <footer>
     <div className="container">
       <div className="footer-box column">
@@ -46,7 +46,7 @@ const Footer = () =>
           </div>
           <ContactBox />
         </div>
-        <Privacy />
+        <Privacy handleModal={handleModal} />
       </div>
     </div>
 
@@ -58,9 +58,9 @@ const ContactBox = () =>
     <NavLinks />
   </div>
 
-const Privacy = () =>
+const Privacy = ({handleModal}) =>
   <div className="privacy-box">
-    Política de privacidad | © 2018 Muñoz Aya. Todos los derechos reservados.
+    <span onClick={handleModal}>Política de tratamiento de datos personales &nbsp;</span> | © 2018 Muñoz Aya. Todos los derechos reservados.
   </div>
 
 const Contact = () =>

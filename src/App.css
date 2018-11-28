@@ -1467,6 +1467,23 @@ transform: scale(.9);
   }
 }
 
+/* Datos */
+.datos{
+  font-family: 'Montserrat';
+  color: #2A3D4C;
+}
+
+.datos h1{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+.datos p{
+  font-size: 11px;
+  margin: 0 15px;;
+}
+
 /* Footer styles */
 footer{
   background-color: #2A3D4C;
@@ -1557,6 +1574,10 @@ footer{
   font-weight: 400;
   font-size: 12px;
   color: #5D9AAF;
+}
+
+.privacy-box span{
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1230px) {
