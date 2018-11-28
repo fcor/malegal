@@ -4,8 +4,8 @@ import alejandraSmall from '../assets/img/alejandra_small.jpg'
 import alejandraModal from '../assets/img/alejandra_modal.jpg'
 import lauraSmall from '../assets/img/laura_small.jpg'
 import lauraModal from '../assets/img/laura_modal.jpg'
-import nataliaSmall from '../assets/img/natalia_small.jpg'
-import nataliaModal from '../assets/img/natalia_modal.jpg'
+import sebastianSmall from '../assets/img/sebastian_small.jpg'
+import sebastianModal from '../assets/img/sebastian_modal.jpg'
 import danielaSmall from '../assets/img/daniela_small.jpg'
 import danielaModal from '../assets/img/daniela_modal.jpg'
 import edgarSmall from '../assets/img/edgar_small.jpg'
@@ -41,14 +41,14 @@ const getMemberInfo = (name) => {
       email: 'ana@malegal.co',
       bio: 'Abogada de la Universidad Sergio Arboleda, con énfasis en Derecho Anglosajón, hace parte del equipo de litigios en materia de seguridad social y laboral. Dentro de sus funciones se encuentra la preparación, presentación y contestación de demandas, asistencia a audiencias y diligencias judiciales. Adicionalmente, apoya en labores de investigación y consultoría en materia Pensional.'
     }
-  } else if (name === 'Natalia') {
+  } else if (name === 'Sebastian') {
     return {
-      name: 'Natalia García Pulido',
-      position: 'Asociada',
-      avatar: nataliaSmall,
-      modal: nataliaModal,
-      email: 'mpulido@malegal.co',
-      bio: 'Abogada de la Universidad Externado de Colombia, con profundización en derecho civil, derecho de seguros y contratos atípicos. Como miembro del equipo de derecho financiero participa en la revisión y negociación de contratos de diferentes transacciones y financiación de proyectos de infraestructura. Así mismo, apoya al grupo de derecho corporativo y financiero con labores de investigación y consultoría.'
+      name: 'Sebastian Zapata Veira',
+      position: 'Asociado',
+      avatar: sebastianSmall,
+      modal: sebastianModal,
+      email: 'szapata@malegal.co',
+      bio: 'Abogado de la Universidad Externado de Colombia, con profundización en derecho civil, derecho de seguros y contratos atípicos. Como miembro del equipo de derecho financiero participa en la revisión y negociación de contratos de diferentes transacciones y financiación de proyectos de infraestructura. Así mismo, apoya al grupo de derecho corporativo y financiero con labores de investigación y consultoría.'
     }
   } else if (name === 'Edgar') {
     return {

@@ -7,7 +7,7 @@ import mail from '../assets/img/mail.png'
 const teamMembers = ['Daniela',
                      'Maria',
                      'Ana',
-                     'Natalia',
+                     'Sebastian',
                      'Edgar',
                      'Laura'
                     ]
