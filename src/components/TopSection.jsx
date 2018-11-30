@@ -11,7 +11,7 @@ const TopSection = ({ location }) =>{
         <div className="crossfade bg1">
           <div className="container">
             <Navbar variant="home" type="home"  />
-            <div className="top-section-text column">
+            <div className="top-section-text bf column">
               <div className="top-section-box">
                 <div className="box"></div>
                 <h1 className="bg1-title">Navegando Seguro</h1>
@@ -35,7 +35,7 @@ const TopSection = ({ location }) =>{
         <div className="crossfade bg3">
           <div className="container">
             <Navbar variant="home" type="home"  />
-            <div className="top-section-text column">
+            <div className="top-section-text bf column">
               <div className="top-section-box">
                 <div className="box"></div>
                 <h1>Su aliado en el mercado local</h1>
