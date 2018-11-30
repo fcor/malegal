@@ -20,7 +20,7 @@ const TopSection = ({ location }) =>{
           </div>
         </div>
 
-        <div className="crossfade bg2">
+        <div className="crossfade bg2 desktop">
           <div className="container">
             <Navbar variant="home" type="home"  />
             <div className="top-section-text column">
@@ -32,7 +32,7 @@ const TopSection = ({ location }) =>{
           </div>
         </div>
 
-        <div className="crossfade bg3">
+        <div className="crossfade bg3 desktop">
           <div className="container">
             <Navbar variant="home" type="home"  />
             <div className="top-section-text bf column">

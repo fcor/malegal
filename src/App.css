@@ -132,10 +132,6 @@ body.no-scroll{
   background-image: url('./assets/img/shipLarge.jpg');
 }
 
-.bg1-title{
-  /* color: white !important; */
-}
-
 .bg2{
   background-image: url('./assets/img/7.jpg');
   -webkit-animation-delay: 8s;
@@ -476,6 +472,10 @@ body.no-scroll{
   .side-menu{
     display: inline;
   }
+
+  .crossfade.desktop{
+    display: none;
+  }
   .menu-responsive{
     display: flex;
     align-items: center;
@@ -526,14 +526,24 @@ body.no-scroll{
     padding: 10px 20px;
     height: 50px;
   }
-  .top-section.img{
-    background-image: url('./assets/img/8.jpg');
+  .crossfade.bg1{
+    background-image: url('./assets/img/shipSmall.jpg');
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    position: static;
+    opacity: 1;
     /* height: 95vh; */
+  }
+  .top-section.img{
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 820px) {
-  .top-section.img{
+  .crossfade.bg1{
     /* background-image: url('./assets/img/8.jpg'); */
     height: 68vh;
   }
@@ -558,7 +568,7 @@ body.no-scroll{
   }
 }
 @media screen and (max-width: 767px) {
-  .top-section.img{
+  .crossfade.bg1{
     /* background-image: url('./assets/img/8.jpg'); */
     height: calc(100vh - 322.467px);
   }
