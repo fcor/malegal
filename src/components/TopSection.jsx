@@ -6,14 +6,40 @@ import bg1 from '../assets/img/7.jpg'
 const TopSection = ({ location }) =>{
   if (location === '/') {
     return(
-      <div className="top-section img bg1">
+      <div className="top-section img ">
         {/* <img className="bg" src={bg1} /> */}
-        <div className="container">
-          <Navbar variant="home" type="home"  />
-          <div className="top-section-text column">
-            <div className="top-section-box">
-              <div className="box"></div>
-              <h1>Construyendo soluciones</h1>
+        <div className="crossfade bg1">
+          <div className="container">
+            <Navbar variant="home" type="home"  />
+            <div className="top-section-text column">
+              <div className="top-section-box">
+                <div className="box"></div>
+                <h1 className="bg1-title">Navegando Seguro</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="crossfade bg2">
+          <div className="container">
+            <Navbar variant="home" type="home"  />
+            <div className="top-section-text column">
+              <div className="top-section-box">
+                <div className="box"></div>
+                <h1>Construyendo Soluciones</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="crossfade bg3">
+          <div className="container">
+            <Navbar variant="home" type="home"  />
+            <div className="top-section-text column">
+              <div className="top-section-box">
+                <div className="box"></div>
+                <h1>Su aliado en el mercado local</h1>
+              </div>
             </div>
           </div>
         </div>
@@ -21,7 +47,7 @@ const TopSection = ({ location }) =>{
     )
   }
   return(
-    <div className="top-section">
+    <div className="top-section-default">
       <div className="container">
         <Navbar />
       </div>

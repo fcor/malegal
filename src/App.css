@@ -92,7 +92,7 @@ body.no-scroll{
 }
 
 /* TopSection Styles */
-.top-section{
+.top-section-default{
   background-color: #2A3D4C;
   /* position: relative; */
 }
@@ -110,37 +110,87 @@ body.no-scroll{
   animation-iteration-count: infinite; */
 }
 
-.top-section.img .bg{
+.crossfade{
+  background-size: cover;
+  height: 95vh;
   position: absolute;
   width: 100%;
-  height: 95vh;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  opacity: 0;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: imageAnimation 24s linear infinite 0s;
+  -moz-animation: imageAnimation 24s linear infinite 0s;
+  -o-animation: imageAnimation 24s linear infinite 0s;
+  -ms-animation: imageAnimation 24s linear infinite 0s;
+  animation: imageAnimation 24s linear infinite 0s; 
 }
 
 .bg1{
-  background-image: url('./assets/img/7.jpg');
+  background-image: url('./assets/img/shipLarge.jpg');
 }
+
+.bg1-title{
+  /* color: white !important; */
+}
+
 .bg2{
-  background-image: url('./assets/img/9.jpg');
+  background-image: url('./assets/img/7.jpg');
+  -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s; 
 }
 .bg3{
-  background-image: url('./assets/img/10.jpg');
+  background-image: url('./assets/img/bfLarge.jpg');
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -o-animation-delay: 16s;
+  -ms-animation-delay: 16s;
+  animation-delay: 16s; 
 }
 
+@-webkit-keyframes imageAnimation { 
+  0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
 
-@keyframes background {
-  0% {
-    background-image: url('./assets/img/7.jpg');
-    opacity: 1;
-  }
-  33% {
-    background-image: url('./assets/img/9.jpg');
-  }
-  66% {
-    background-image: url('./assets/img/10.jpg');
-  }
-  100% {
-    background-image: url('./assets/img/7.jpg');
-  }
+@-moz-keyframes imageAnimation { 
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+@-o-keyframes imageAnimation { 
+  0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-ms-keyframes imageAnimation { 
+  0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes imageAnimation { 
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
 }
 
 @keyframes animationIn {
