@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from './Navbar'
+import bg1 from '../assets/img/7.jpg'
 
 const TopSection = ({ location }) =>{
   if (location === '/') {
     return(
-      <div className="top-section img">
+      <div className="top-section img bg1">
+        {/* <img className="bg" src={bg1} /> */}
         <div className="container">
           <Navbar variant="home" type="home"  />
           <div className="top-section-text column">
@@ -13,7 +15,6 @@ const TopSection = ({ location }) =>{
               <div className="box"></div>
               <h1>Construyendo soluciones</h1>
             </div>
-            {/* <p>Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry</p> */}
           </div>
         </div>
       </div>
