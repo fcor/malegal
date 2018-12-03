@@ -100,7 +100,7 @@ body.no-scroll{
 .top-section.img{
   /* background-image: url('./assets/img/7.jpg'); */
   /* background-size: 100% 100%; */
-  background-size: cover;
+  /* background-size: cover; */
   /* background-repeat: no-repeat; */
   height: 95vh;
   /* animation: animationIn .25s ease-in forwards; */
@@ -112,7 +112,7 @@ body.no-scroll{
 
 .crossfade{
   background-size: cover;
-  height: 95vh;
+  height: 95.1vh;
   position: absolute;
   width: 100%;
   top: 0px;
