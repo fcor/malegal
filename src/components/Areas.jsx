@@ -29,7 +29,7 @@ const Cards = () =>
   areas.map((item) => {
     return (
       <div className="areas-card row" key={item.title}>
-        <div className="areas-card-left column">
+        <div className="areas-card-left">
           <h1>
             {item.title}
           </h1>
