@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Navbar from './Navbar'
-import bg1 from '../assets/img/7.jpg'
+// import bg1 from '../assets/img/7.jpg'
 
 const TopSection = ({ location }) =>{
   if (location === '/') {

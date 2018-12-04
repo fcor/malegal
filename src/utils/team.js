@@ -1,4 +1,3 @@
-import man from '../assets/img/man.png'
 import woman from '../assets/img/woman.png'
 import alejandraSmall from '../assets/img/alejandra_small.jpg'
 import alejandraModal from '../assets/img/alejandra_modal.jpg'
