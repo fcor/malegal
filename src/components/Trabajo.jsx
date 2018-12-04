@@ -51,9 +51,17 @@ class Trabajo extends React.Component {
   }
 
   sendMail(){
-    fetch('https://us-central1-malegal-dabd2.cloudfunctions.net/sendMail',{
+    const {name, email, phone, fileName, text} = this.state
+    const data = {
+                    name,
+                    email, 
+                    phone,
+                    text,
+                    fileName
+                  }
+    fetch('http://killpop-api.glitch.me/sendMail',{
       method: "POST",
-      body:'{"name": "Fabio"}',
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json"
         }
