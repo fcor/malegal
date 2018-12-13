@@ -1,15 +1,15 @@
-import woman from '../assets/img/woman.png'
 import alejandraSmall from '../assets/img/alejandra_small.jpg'
 import alejandraModal from '../assets/img/alejandra_modal.jpg'
-import lauraSmall from '../assets/img/laura_small.jpg'
-import lauraModal from '../assets/img/laura_modal.jpg'
+import cristinaModal from '../assets/img/cristina_modal.jpg'
+import cristinaSmall from '../assets/img/cristina_small.jpg'
+import mariaSmall from '../assets/img/maria_small.jpg'
+import mariaModal from '../assets/img/maria_modal.jpg'
 import sebastianSmall from '../assets/img/sebastian_small.jpg'
 import sebastianModal from '../assets/img/sebastian_modal.jpg'
 import danielaSmall from '../assets/img/daniela_small.jpg'
 import danielaModal from '../assets/img/daniela_modal.jpg'
 import edgarSmall from '../assets/img/edgar_small.jpg'
 import edgarModal from '../assets/img/edgar_modal.jpg'
-import manLarge from '../assets/img/manLarge.png'
 
 
 const getMemberInfo = (name) => {
@@ -31,12 +31,12 @@ const getMemberInfo = (name) => {
       email: 'mgiraldo@malegal.co',
       bio: 'Maria Alejandra es Abogada, LLM en Derecho Financiero y Bancario, con una amplia experiencia en temas de gobierno corporativo y compliance de las entidades financieras, negociación de contratos financieros, mercado de valores y regulación de servicios y productos bancarios. Coordina los esfuerzos del equipo en materia de transacciones estructuradas y facilidades crediticias, así como la consultoría legal de la firma en materia de derecho financiero y regulación cambiaria. '
     }
-  } else if (name === 'Ana') {
+  } else if (name === 'Cristina') {
     return {
-      name: 'Ana Ortiz',
+      name: 'Cristina Rojas',
       position: 'Asociada Senior',
-      avatar: woman,
-      modal: manLarge,
+      avatar: cristinaSmall,
+      modal: cristinaModal,
       email: 'ana@malegal.co',
       bio: 'Abogada de la Universidad Sergio Arboleda, con énfasis en Derecho Anglosajón, hace parte del equipo de litigios en materia de seguridad social y laboral. Dentro de sus funciones se encuentra la preparación, presentación y contestación de demandas, asistencia a audiencias y diligencias judiciales. Adicionalmente, apoya en labores de investigación y consultoría en materia Pensional.'
     }
@@ -58,12 +58,12 @@ const getMemberInfo = (name) => {
       email: 'emunoz@malegal.co',
       bio: 'Abogado, LLM, MBA, con más de 18 años de experiencia en temas relacionados con inversiones, derecho corporativo, bancario, y de valores, banca de inversión, fondos de inversión colectiva y fondos de capital privado; operaciones de tesorería y negociación de créditos sindicados. Cuenta con una amplia experiencia profesional en estos campos, tanto en el sector público como privado a través de su vinculación a firmas de abogados de primer nivel global y local, Citibank, Davivienda, y el Ministerio de Hacienda y Crédito Público, entre otros.'
     }
-  } else if (name === 'Laura') {
+  } else if (name === 'MariaP') {
     return {
-      name: 'Laura Villareal',
+      name: 'Maria Paula Pulido',
       position: 'Asociada',
-      avatar: lauraSmall,
-      modal: lauraModal,
+      avatar: mariaSmall,
+      modal: mariaModal,
       email: 'lavillarreal@malegal.co',
       bio: 'Abogada de la Pontificia Universidad Javeriana de Bogotá. Apoya al equipo de litigios ante la Superintendencia Financiera y ante la Superintendencia de Sociedades, donde está encargada de la vigilancia de procesos y preparación de contestaciones y memoriales. También ejerce en actividades relacionadas con la Secretaría General de entidades vigiladas por la Superintendencia Financiera. Participa activamente en la elaboración de diferentes conceptos e investigaciones en el área de Derecho Financiero.'
     }

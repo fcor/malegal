@@ -6,10 +6,10 @@ import mail from '../assets/img/mail.png'
 
 const teamMembers = ['Daniela',
                      'Maria',
-                     'Ana',
+                     'Cristina',
                      'Sebastian',
                      'Edgar',
-                     'Laura'
+                     'MariaP'
                     ]
 
 class Team extends React.Component {
