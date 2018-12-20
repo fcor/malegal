@@ -47,7 +47,7 @@ const getMemberInfo = (name) => {
       avatar: sebastianSmall,
       modal: sebastianModal,
       email: 'szapata@malegal.co',
-      bio: 'Abogado de la Universidad Externado de Colombia, con profundización en derecho civil, derecho de seguros y contratos atípicos. Como miembro del equipo de derecho financiero participa en la revisión y negociación de contratos de diferentes transacciones y financiación de proyectos de infraestructura. Así mismo, apoya al grupo de derecho corporativo y financiero con labores de investigación y consultoría.'
+      bio: 'Abogado con experiencia en inversiones y operaciones de tesorería de entidades vigiladas por la Superintendencia Financiera de Colombia. Trabajó en López Montealegre & Abogados Asociados, en la Corporación Financiera Colombiana y en Colfondos - Pensiones y Cesantías. Es autor y coautor de papers y capítulos de libros en temas de fondos de inversión colectiva, hedge funds y fondos de capital privado. Fue ganador del Concurso Arquitectos del Mercado de Capitales del AMV. Actualmente se desempeña en el área de derecho financiero de la firma, en temas regulatorios, derivados y fintech.'
     }
   } else if (name === 'Edgar') {
     return {
@@ -64,8 +64,8 @@ const getMemberInfo = (name) => {
       position: 'Asociada',
       avatar: mariaSmall,
       modal: mariaModal,
-      email: 'lavillarreal@malegal.co',
-      bio: 'Abogada de la Pontificia Universidad Javeriana de Bogotá. Apoya al equipo de litigios ante la Superintendencia Financiera y ante la Superintendencia de Sociedades, donde está encargada de la vigilancia de procesos y preparación de contestaciones y memoriales. También ejerce en actividades relacionadas con la Secretaría General de entidades vigiladas por la Superintendencia Financiera. Participa activamente en la elaboración de diferentes conceptos e investigaciones en el área de Derecho Financiero.'
+      email: 'mpulido@malegal.co',
+      bio: 'Abogada de la Universidad Sergio Arboleda, en la cual hizo parte del “Programa de Honores Rodrigo Noguera Laborde” que exalta a los estudiantes que se destacan por sutrayectoria académica y personal. Cuenta con experiencia en derecho comercial y laboral; en el área de litigio tiene experiencia en procesos laborales, de seguridad social y protección al consumidor financiero. Actualmente se desempeña en el área de litigio de la firma, teniendo a su cargo la representación y defensa jurídica de los procesos judiciales de las entidades financieras clientes de la Firma. Previo a su ingreso a la Firma, trabajó en el Banco CorpBanca y en el área de recursos humanos de la Multinacional ZT'
     }
   }
 }
