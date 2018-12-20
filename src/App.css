@@ -1063,6 +1063,7 @@ body.no-scroll{
 }
 
 .work-form-input input{
+  font-family: 'Montserrat';
   border: none;
   border-bottom: 1px solid #2A3D4C;
   width:320px;
@@ -1137,7 +1138,8 @@ body.no-scroll{
   color: #2A3D4C;
   font-size: 12px;
   font-weight: 500;
-  padding: 2px;
+  padding: 6px;
+  font-family: 'Montserrat';
 }
 
 .submit{

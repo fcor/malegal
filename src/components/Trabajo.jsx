@@ -44,10 +44,16 @@ class Trabajo extends React.Component {
     this.uploadFile = this.uploadFile.bind(this)
     this.handleTyping = this.handleTyping.bind(this)
     this.sendMail = this.sendMail.bind(this)
+    this.clearState = this.clearState.bind(this)
   }
 
   componentDidMount(){
     window.scrollTo(0, 0)
+  }
+
+  clearState(){
+    console.log('Hola')
+    
   }
 
   sendMail(){
@@ -78,6 +84,15 @@ class Trabajo extends React.Component {
           text: "Tu mensaje se ha enviado!",
           type: "success",
           confirmButtonText: 'Ok',
+        })
+        this.setState({
+          name: '',
+          email: '',
+          phone: '',
+          isFileLoaded: false,
+          isLoadingFile: null,
+          fileName: '',
+          text: ''
         })
       })
   }
