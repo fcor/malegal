@@ -82,8 +82,8 @@ body.no-scroll{
 }
 
 .logo{
-  /* width: 180px; */
-  width: 140px;
+  width: 180px;
+  /* width: 140px; */
 
 }
 
@@ -605,7 +605,8 @@ body.no-scroll{
     margin: 15px 0;
   }
   .top-section-text{
-    padding-left: 30px;
+    padding-left: 15px;
+    padding-top: 35px !important;
   }
   .box{
     width: 4px;
