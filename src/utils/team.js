@@ -34,10 +34,10 @@ const getMemberInfo = (name) => {
   } else if (name === 'Cristina') {
     return {
       name: 'Cristina Rojas',
-      position: 'Asociada Senior',
+      position: 'Asistente administrativa',
       avatar: cristinaSmall,
       modal: cristinaModal,
-      email: 'ana@malegal.co',
+      email: 'administrativo@malegal.co',
       bio: 'Abogada de la Universidad Sergio Arboleda, con énfasis en Derecho Anglosajón, hace parte del equipo de litigios en materia de seguridad social y laboral. Dentro de sus funciones se encuentra la preparación, presentación y contestación de demandas, asistencia a audiencias y diligencias judiciales. Adicionalmente, apoya en labores de investigación y consultoría en materia Pensional.'
     }
   } else if (name === 'Sebastian') {

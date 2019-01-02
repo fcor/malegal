@@ -65,7 +65,7 @@ class Trabajo extends React.Component {
                     text,
                     fileName
                   }
-    fetch('http://killpop-api.glitch.me/sendMail',{
+    fetch('https://killpop-api.glitch.me/sendMail',{
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -116,7 +116,7 @@ class Trabajo extends React.Component {
   uploadFile(file){
     const data = new FormData()
     data.append('upload', file)
-    fetch('http://killpop-api.glitch.me/uploadFile', {
+    fetch('https://killpop-api.glitch.me/uploadFile', {
       method: 'POST',
       body: data 
       }).then(
