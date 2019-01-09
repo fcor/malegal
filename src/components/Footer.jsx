@@ -21,7 +21,7 @@ const getContactDetails = (variant) => {
   if (variant === 'address') {
     return {
       icon: address,
-      text: 'Calle 73 # 9-42 / Oficina 409 Bogotá, Colombia'
+      text: 'Calle 71 # 6-21 / Oficina 704 Bogotá, Colombia'
     }
   } else if (variant === 'phone') {
     return {
@@ -60,7 +60,7 @@ const ContactBox = () =>
 
 const Privacy = ({handleModal}) =>
   <div className="privacy-box">
-    <span onClick={handleModal}>Política de tratamiento de datos personales &nbsp;</span> | © 2018 Muñoz Aya. Todos los derechos reservados.
+    <span onClick={handleModal}>Política de tratamiento de datos personales &nbsp;</span> | © 2019 Muñoz Aya. Todos los derechos reservados.
   </div>
 
 const Contact = () =>
