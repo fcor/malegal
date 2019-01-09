@@ -20,7 +20,7 @@ const getMemberInfo = (name) => {
       avatar: danielaSmall,
       modal: danielaModal,
       email: 'drivera@malegal.co',
-      bio: 'Abogada de la Universidad Católica de Colombia, con experiencia en litigio y contratación estatal, con profundización en derecho laboral, seguridad social y derecho administrativo. Como miembro del equipo de litigios en materia de seguridad social y laboral ejerce funciones de apoyo en la sustanciación de memoriales, contestación de demandas, y asistencia a audiencias. '
+      bio: 'Abogada de la Universidad Sergio Arboleda, en la cual hizo parte del “Programa de Honores Rodrigo Noguera Laborde” que exalta a los estudiantes que se destacan por su trayectoria académica y personal. Cuenta con experiencia en derecho comercial y laboral; en el área de litigio tiene experiencia en procesos laborales, de seguridad social y protección al consumidor financiero. Actualmente se desempeña en el área de litigio de la firma, teniendo a su cargo la representación y defensa jurídica de los procesos judiciales de las entidades financieras clientes de la Firma. Previo a su ingreso a la Firma, trabajó en el Banco CorpBanca y en el área de recursos humanos de la Multinacional ZTE.'
     }
   } else if (name === 'Maria') {
     return {
@@ -38,7 +38,7 @@ const getMemberInfo = (name) => {
       avatar: cristinaSmall,
       modal: cristinaModal,
       email: 'administrativo@malegal.co',
-      bio: 'Abogada de la Universidad Sergio Arboleda, con énfasis en Derecho Anglosajón, hace parte del equipo de litigios en materia de seguridad social y laboral. Dentro de sus funciones se encuentra la preparación, presentación y contestación de demandas, asistencia a audiencias y diligencias judiciales. Adicionalmente, apoya en labores de investigación y consultoría en materia Pensional.'
+      bio: ' '
     }
   } else if (name === 'Sebastian') {
     return {
