@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import logo2 from '../assets/img/logoNew.png'
-import logo from '../assets/img/logo2New.png'
+import logo2 from '../assets/img/logoNewSmall.png'
+import logo from '../assets/img/logoNew2Small.png'
 
 const getLogo = (type) => (type === "home") ? logo2 : logo
 

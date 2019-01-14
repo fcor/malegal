@@ -178,7 +178,7 @@ const WorkCard = () =>
       TRABAJA CON NOSOTROS
     </header>
     <p>
-      En Muñoz Aya Legal buscamos personas comprometidas con el conocimiento y la excelencia, que busquen un espacio  para aprender y crecer junto a nosotros.  Si quieres ser parte de nuestro equipo, envíanos tu hoja de vida y nos pondremos en contacto contigo.
+      En Muñoz Aya buscamos personas comprometidas con el conocimiento y la excelencia, que busquen un espacio  para aprender y crecer junto a nosotros.  Si quieres ser parte de nuestro equipo, envíanos tu hoja de vida y nos pondremos en contacto contigo.
     </p>
     <h2>
       LLENA Y ENVÍANOS EL FORMULARIO CON TU CV

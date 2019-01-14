@@ -41,7 +41,7 @@ const Links = ({ variant, onClick }) =>
       activeClassName="selected"
       onClick={onClick}
       >
-      Trabaje con nosotros
+      Trabaja con nosotros
     </NavLink>
   </div>
 
