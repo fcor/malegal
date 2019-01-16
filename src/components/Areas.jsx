@@ -1,5 +1,5 @@
 import React from 'react'
-import { areas } from '../utils/areas.js'
+import getAreas from '../utils/areas.js'
 
 class Areas extends React.Component {
 
@@ -8,24 +8,27 @@ class Areas extends React.Component {
   }
 
   render() {
+    const { lang } = this.props
+    const areas = getAreas(lang)
+    const text = lang === 'es' ? 'ÁREAS DE PRÁCTICA' : 'PRACTICE AREAS'
     return(
       <div className="container column">
-        <Header />
-        <Cards />
+        <Header text={text} />
+        <Cards areas={areas} />
       </div>
     )
   }
 }
 
-const Header = () =>
+const Header = ({text}) =>
   <div className="areas-header column">
     <h1>
-      ÁREAS DE PRÁCTICA
+      {text}
     </h1>
     {/* <p>EN MUÑOZ AYA CONTAMOS CON UN EQUIPO ALTAMENTE CALIFICADO PARA PRESTAR UN EXCELENTE SERVICIO DE ASESORÍA LEGAL</p> */}
   </div>
 
-const Cards = () =>
+const Cards = ({areas}) =>
   areas.map((item) => {
     return (
       <div className="areas-card row" key={item.title}>

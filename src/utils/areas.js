@@ -1,4 +1,4 @@
-export const areas = [
+const areasEs = [
   {
     title: 'Derecho Corporativo',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
@@ -49,3 +49,64 @@ export const areas = [
     ]
   },
 ]
+
+const areasEn = [
+  {
+    title: 'Corporate, Business & Transactions',
+    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
+    bullets: [
+      'Creation of partnerships and corporations',
+      'Foreign exchange requirements',
+      'Corporate governance',
+      'Management of affairs in front of local authorities',
+      'Negotiation and drafting of agreements',
+      'Directors’ liability',
+      'Dispute resolution',
+      'Advice',
+    ]
+  },
+  {
+    title: 'Financial, Banking, Private Equity, FinTech, Derivatives & Structured Products',
+    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
+    bullets: [
+      'Customer protection',
+      'Incorporation of financial entities',
+      'Structuring of Investment Funds (Fondos de Inversión Colectiva – FICs (local equivalent of Mutual Funds and UCITS), Fondos de Capital Privado – FCPs (local equivalent of Private Equity Funds), Fundos Bursátiles (local equivalent of Exchange Traded Funds), and Hedge Funds)',
+      'Negotiation and drafting of loans, credit facilities and other agreements',
+      'Due Diligence',
+      'Compliance',
+      'Corporate governance',
+      'Management of affairs in front of local authorities',
+      'Negotiation of ISDA Schedules, Credit Support Annexes, bilateral amendments, and of agreements with the local central counterparty',
+      'Advice on ISDA’s protocols adherence',
+      'Structuring and advising on financial derivatives regulation and accounting',
+      'Structuring and advising on structured products regulation',
+      'Disruptive mechanisms to provide financial services and AI for trading and financial advice',
+      'Public offerings',
+      'Constitution of security interests',
+      'Project Finance',
+      'Trade Finance',
+      'Securitizations',
+      'Directors’ liability',
+      'Dispute resolution',
+      'Advice',
+    ]
+  },
+  {
+    title: 'Social Security & Labor',
+    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
+    bullets: [
+      'Dispute resolution',
+      'Advice',
+    ]
+  },
+]
+
+const getAreas = (lang) => {
+  if (lang === 'es') {
+    return areasEs
+  }
+  return areasEn
+}
+
+export default getAreas
