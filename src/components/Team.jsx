@@ -45,6 +45,7 @@ class Team extends React.Component {
 
   render() {
     const { isShowingDetails, member } = this.state
+    const  { lang } = this.props
 
     return(
       <div className="team">
@@ -56,11 +57,11 @@ class Team extends React.Component {
             width={725}
             height={570}
             >
-              <Modal name={member} />
+              <Modal name={member} lang={lang} />
             </Rodal>
             <div className="team-box column">
-              <Header />
-              <Cards onClick={this.onClick} />
+              <Header lang={lang} />
+              <Cards onClick={this.onClick} lang={lang} />
             </div>
           </div>
       </div>
@@ -68,15 +69,19 @@ class Team extends React.Component {
   }
 }
 
-const Header = () =>
-  <h1 className="team-header">
-    NUESTRO EQUIPO
-  </h1>
+const Header = ({ lang }) => {
+  const text = lang === 'es' ? 'NUESTRO EQUIPO' : 'OUR TEAM'
+  return (
+    <h1 className="team-header">
+      {text}
+    </h1>
+  )
+}
 
-const Cards = ({ onClick }) =>
+const Cards = ({ onClick, lang }) =>
   <div className="team-cards">
     {teamMembers.map( (item) => {
-      const member = getMemberInfo(item)
+      const member = getMemberInfo(item, lang)
       return (
         <div
           key={item}
@@ -97,8 +102,8 @@ const Cards = ({ onClick }) =>
     })}
   </div>
 
-const Modal = ({ name }) => {
-  const member = getMemberInfo(name)
+const Modal = ({ name, lang }) => {
+  const member = getMemberInfo(name, lang)
 
   return(
     <div className="team-modal row">
