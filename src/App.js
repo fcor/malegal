@@ -76,6 +76,7 @@ class App extends Component {
             </div>
             <Footer 
               handleModal={this.handleModal}
+              lang={lang}
              />
           </div>
         </Router>

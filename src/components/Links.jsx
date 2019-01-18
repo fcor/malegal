@@ -12,7 +12,7 @@ const getCs = (variant) => {
   else return "menu-side column"
 }
 
-const Links = ({ variant, onClick }) =>
+const Links = ({ variant, onClick, lang }) =>
   <div className={getCs(variant)}>
     {/* <NavLink
       exact
@@ -27,21 +27,21 @@ const Links = ({ variant, onClick }) =>
       activeClassName="selected"
       onClick={onClick}
       >
-        Áreas de práctica
+       {lang ==='es' ? 'Áreas de práctica' : 'Practice areas'}
     </NavLink>
     <NavLink
       to='/equipo'
       activeClassName="selected"
       onClick={onClick}
       >
-      Equipo
+      {lang ==='es' ? 'Equipo' : 'Team'}
     </NavLink>
     <NavLink
       to='/trabajo'
       activeClassName="selected"
       onClick={onClick}
       >
-      Trabaja con nosotros
+      {lang ==='es' ? 'Trabaja con nosotros' : 'Careers'}
     </NavLink>
   </div>
 

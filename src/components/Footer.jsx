@@ -17,8 +17,14 @@ const mail =
     <path d="M14.05,8.79a1.73,1.73,0,0,1-.22.84L9.41,4.68,13.78.86a1.74,1.74,0,0,1,.27.93Zm-7-3.21L13.13.26A1.73,1.73,0,0,0,12.3,0H1.8A1.72,1.72,0,0,0,1,.26Zm1.7-.32L7.34,6.49a.44.44,0,0,1-.58,0L5.35,5.26l-4.48,5a1.73,1.73,0,0,0,.92.27H12.3a1.73,1.73,0,0,0,.92-.27ZM.32.86a1.74,1.74,0,0,0-.27.93v7a1.73,1.73,0,0,0,.22.84L4.7,4.68Zm0,0"/>
   </svg>
 
-const getContactDetails = (variant) => {
+const getContactDetails = (variant, lang) => {
   if (variant === 'address') {
+    if (lang === 'en') {
+      return {
+        icon: address,
+        text: '71st Street - 6-21 / Office 704 Bogotá, Colombia'
+      }  
+    }
     return {
       icon: address,
       text: 'Calle 71 # 6-21 / Oficina 704 Bogotá, Colombia'
@@ -26,7 +32,7 @@ const getContactDetails = (variant) => {
   } else if (variant === 'phone') {
     return {
       icon: phone,
-      text: '(+57) (1) 702 03 30'
+      text: '(+57) (1) 702 03 30 / 589 76 63'
     }
   } else {
     return {
@@ -36,7 +42,7 @@ const getContactDetails = (variant) => {
   }
 }
 
-const Footer = ({handleModal}) =>
+const Footer = ({handleModal, lang}) =>
   <footer>
     <div className="container">
       <div className="footer-box column">
@@ -44,43 +50,46 @@ const Footer = ({handleModal}) =>
           <div className="footer-logo">
             <Logo />
           </div>
-          <ContactBox />
+          <ContactBox lang={lang} />
         </div>
-        <Privacy handleModal={handleModal} />
+        <Privacy handleModal={handleModal} lang ={lang} />
       </div>
     </div>
 
   </footer>
 
-const ContactBox = () =>
+const ContactBox = ({lang}) =>
   <div className="contact-box row">
-    <Contact />
-    <NavLinks />
+    <Contact lang={lang} />
+    <NavLinks lang={lang} />
   </div>
 
-const Privacy = ({handleModal}) =>
+const Privacy = ({handleModal, lang}) =>
   <div className="privacy-box">
-    <span onClick={handleModal}>Política de tratamiento de datos personales &nbsp;</span> | © 2019 Muñoz Aya. Todos los derechos reservados.
+    <span onClick={handleModal}>
+      {lang=== 'es' ? 'Política de tratamiento de datos personales' : 'Privacy & Cookies Statement'} &nbsp;
+    </span> 
+    | © 2019 Muñoz Aya. {lang=== 'es' ? ' Todos los derechos reservados.' : ' All rights reserved'}
   </div>
 
-const Contact = () =>
+const Contact = ({lang}) =>
   <div className="contact-box-left column">
-    <p className="contact-box-title">CONTÁCTENOS</p>
+    <p className="contact-box-title">{lang=== 'es' ? 'CONTÁCTENOS' : 'CONTACT US'}</p>
     <div className="contact-details">
-      <ContactDetail variant="address" />
-      <ContactDetail variant="phone" />
-      <ContactDetail variant="mail" />
+      <ContactDetail lang={lang} variant="address" />
+      <ContactDetail lang={lang} variant="phone" />
+      <ContactDetail lang={lang} variant="mail" />
     </div>
   </div>
 
-const NavLinks = () =>
+const NavLinks = ({lang}) =>
 <div className="footer-navlinks">
   <p className="contact-box-title">LINKS</p>
-  <Links variant="footer"/>
+  <Links variant="footer" lang={lang}/>
 </div>
 
-const ContactDetail = ({ variant }) => {
-  const contact = getContactDetails(variant)
+const ContactDetail = ({ variant, lang }) => {
+  const contact = getContactDetails(variant, lang)
   return (
     <div className="contact-detail row">
       {/* <img
