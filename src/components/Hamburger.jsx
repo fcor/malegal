@@ -49,7 +49,7 @@ class Hamburger extends React.Component {
 
   render() {
     const { active } = this.state
-    const { variant } = this.props
+    const { variant, lang } = this.props
     return(
       <div id="side-menu" className="side-menu">
         <div className={`hamburger-menu`} onClick={this.handleClick} >
@@ -59,7 +59,7 @@ class Hamburger extends React.Component {
             <div className={`bar-menu b3 ${getColor(variant)} ${getAnimationCS(active)}`}></div>
           </div>
         </div>
-        <SideMenu isActive={active} onClickMobile={this.handleClick} />
+        <SideMenu isActive={active} onClickMobile={this.handleClick} lang={lang} />
       </div>
     )
   }
@@ -74,7 +74,7 @@ const SideMenu = (props) => {
       }
       <div className="menu-responsive-content">
         <Logo />
-        <Links variant="side" onClick={props.onClickMobile} />
+        <Links lang={props.lang} variant="side" onClick={props.onClickMobile} />
       </div>
       <div className="menu-responsive-footer">
         Política de privacidad | © 2018 Malegal. Todos los derechos reservados.
