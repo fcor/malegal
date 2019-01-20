@@ -2,8 +2,16 @@ import React from 'react'
 import SVG from './SVG'
 import swal from 'sweetalert2'
 
-const getInputDetails = (type) => {
+const getInputDetails = (type, lang) => {
   if (type === 'name') {
+    if (lang === 'en') {
+      return {
+        id: 'name',
+        type: 'text',
+        label: 'NAME *',
+        placeholder: 'Write your name'
+      }  
+    }
     return {
       id: 'name',
       type: 'text',
@@ -11,6 +19,14 @@ const getInputDetails = (type) => {
       placeholder: 'Escribe tu nombre'
     }
   } else if (type === 'email') {
+    if (lang === 'en') {
+      return {
+        id: 'email',
+        type: 'email',
+        label: 'EMAIL *',
+        placeholder: 'Write your email'
+      }  
+    }
     return {
       id: 'email',
       type: 'email',
@@ -18,6 +34,14 @@ const getInputDetails = (type) => {
       placeholder: 'Escribe tu correo'
     }
   } else {
+    if (lang === 'en') {
+      return {
+        id: 'phone',
+        type: 'tel',
+        label: 'PHONE NUMBER *',
+        placeholder: 'Write your phone number'
+      }  
+    }
     return {
       id: 'phone',
       type: 'tel',
@@ -152,9 +176,10 @@ class Trabajo extends React.Component {
 
   render() {
     const { isFileLoaded, fileName, isLoadingFile, name, email, phone, text } = this.state
+    const { lang } = this.props
     return(
       <div className="work-box row">
-        <WorkCard />
+        <WorkCard lang={lang} />
         <WorkForm
           handleSubmit={this.handleSubmit}
           handleSelectedFile={this.handleSelectedFile}
@@ -166,49 +191,59 @@ class Trabajo extends React.Component {
           email={email}
           phone={phone}
           text={text}
+          lang={lang}
         />
       </div>
     )
   }
 }
 
-const WorkCard = () =>
-  <div className="work-card column">
-    <header>
-      TRABAJA CON NOSOTROS
-    </header>
-    <p>
-      En Muñoz Aya buscamos personas comprometidas con el conocimiento y la excelencia, que busquen un espacio  para aprender y crecer junto a nosotros.  Si quieres ser parte de nuestro equipo, envíanos tu hoja de vida y nos pondremos en contacto contigo.
-    </p>
-    <h2>
-      LLENA Y ENVÍANOS EL FORMULARIO CON TU CV
-    </h2>
-    <SVG />
-  </div>
+const WorkCard = ({lang}) => {
+  const header = lang === 'es' ? 'TRABAJA CON NOSOTROS' : 'JOIN US'
+  const text = lang === 'es' 
+    ? 'En Muñoz Aya buscamos personas comprometidas con el conocimiento y la excelencia, que busquen un espacio  para aprender y crecer junto a nosotros.  Si quieres ser parte de nuestro equipo, envíanos tu hoja de vida y nos pondremos en contacto contigo.' 
+    : 'We are committed to attracting the best people across our practices. If you are looking for a career at Muñoz Aya, please contact us.'
+  const text2 = lang === 'es' ? 'LLENA Y ENVÍANOS EL FORMULARIO CON TU CV' : 'APPLY NOW'
+  return (
+    <div className="work-card column">
+      <header>
+        {header}
+      </header>
+      <p>
+        {text}        
+      </p>
+      <h2>
+        {text2}
+      </h2>
+      <SVG />
+    </div>
+  )
+}
 
-const WorkForm = ({handleSubmit, handleTyping, handleSelectedFile, isLoadingFile, isFileLoaded, fileName, name, mail, phone, text}) =>
+const WorkForm = ({handleSubmit, handleTyping, handleSelectedFile, isLoadingFile, isFileLoaded, fileName, name, mail, phone, text, lang}) =>
   <div className="work-form">
     <div className="rect"></div>
-    <header>FORMULARIO</header>
+    <header>{lang === 'es' ? 'FORMULARIO' : 'CONTACT FORM'}</header>
     <div className="column">
-      <Input variant="name" value={name} handleTyping={handleTyping} />
-      <Input variant="email" value={mail} handleTyping={handleTyping} />
-      <Input variant="phone" value={phone} handleTyping={handleTyping} />
+      <Input variant="name" lang={lang} value={name} handleTyping={handleTyping} />
+      <Input variant="email" lang={lang} value={mail} handleTyping={handleTyping} />
+      <Input variant="phone" lang={lang} value={phone} handleTyping={handleTyping} />
       <Submit 
         handleSelectedFile={handleSelectedFile} 
         isFileLoaded={isFileLoaded}
         isLoadingFile={isLoadingFile}
         fileName={fileName}
+        lang={lang}
       />
-      <TextArea value={text}  handleTyping={handleTyping}/>
+      <TextArea value={text}  handleTyping={handleTyping} lang={lang}/>
       <button onClick={handleSubmit} className="submit">
-        ENVIAR
+        {lang === 'es' ? 'ENVIAR' : 'SEND'}
       </button>
     </div>
   </div>
 
-const Input = ({variant, handleTyping, value}) => {
-  const input = getInputDetails(variant)
+const Input = ({variant, handleTyping, value, lang}) => {
+  const input = getInputDetails(variant, lang)
   return(
     <div className="work-form-input column">
       <label htmlFor={input.id} className="work-form-labels">
@@ -225,14 +260,14 @@ const Input = ({variant, handleTyping, value}) => {
   )
 }
 
-const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
+const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName, lang}) =>
   <div className="work-form-submit column">
     <p className="work-form-labels">
-      ADJUNTA TU CV
+      {lang === 'es' ? 'ADJUNTA TU CV' : 'ATTACH YOUR RESUME'}
     </p>
     <div className="row">
       <label htmlFor="file-upload">
-        Adjuntar archivo
+        {lang === 'es' ? 'Adjuntar archivo' : 'Attach file '}
       </label>
       <input 
         id="file-upload" 
@@ -241,7 +276,7 @@ const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
         onChange={handleSelectedFile} 
       />
       {isLoadingFile &&
-        <p className="file">Cargando...</p>
+        <p className="file">{lang === 'es' ? 'Cargando...' : 'Loading...'}</p>
       }
       {isFileLoaded &&
         <p className="file">{fileName}</p>
@@ -249,10 +284,10 @@ const Submit = ({handleSelectedFile, isLoadingFile, isFileLoaded, fileName}) =>
     </div>
   </div>
 
-const TextArea = ({handleTyping, value}) =>
+const TextArea = ({handleTyping, value, lang}) =>
   <div className="work-form-textarea column">
     <label htmlFor="textarea" className="work-form-labels">
-      ¿POR QUÉ QUIERES UNIRTE A NOSOTROS?
+      {lang === 'es' ? '¿POR QUÉ QUIERES UNIRTE A NOSOTROS?' : 'WHY DO YOU WANT TO JOIN US?'}
     </label>
     <textarea
       id="textarea"
