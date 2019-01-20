@@ -3,18 +3,21 @@ import PropTypes from 'prop-types'
 import Navbar from './Navbar'
 // import bg1 from '../assets/img/7.jpg'
 
-const TopSection = ({ location }) =>{
+const TopSection = ({ location, lang }) =>{
+  const text1 = lang === 'es' ? 'Navegando Seguro' : 'Dealing with Uncertainty'
+  const text2 = lang === 'es' ? 'Construyendo Soluciones' : 'Building Solutions '
+  const text3 = lang === 'es' ? 'Su aliado en el mercado local' : 'Partnering up with Foreigners in Colombian Markets'
   if (location === '/') {
     return(
       <div className="top-section img ">
         {/* <img className="bg" src={bg1} /> */}
         <div className="crossfade bg1">
           <div className="container">
-            <Navbar variant="home" type="home"  />
+            <Navbar lang={lang} variant="home" type="home"  />
             <div className="top-section-text bf column">
               <div className="top-section-box">
                 <div className="box"></div>
-                <h1 className="bg1-title">Navegando Seguro</h1>
+                <h1 className="bg1-title">{text1}</h1>
               </div>
             </div>
           </div>
@@ -22,11 +25,11 @@ const TopSection = ({ location }) =>{
 
         <div className="crossfade bg2 desktop">
           <div className="container">
-            <Navbar variant="home" type="home"  />
+            <Navbar lang={lang} variant="home" type="home"  />
             <div className="top-section-text column">
               <div className="top-section-box">
                 <div className="box"></div>
-                <h1>Construyendo Soluciones</h1>
+                <h1>{text2}</h1>
               </div>
             </div>
           </div>
@@ -34,11 +37,11 @@ const TopSection = ({ location }) =>{
 
         <div className="crossfade bg3 desktop">
           <div className="container">
-            <Navbar variant="home" type="home"  />
+            <Navbar lang={lang} variant="home" type="home"  />
             <div className="top-section-text column">
               <div className="top-section-box">
                 <div className="box"></div>
-                <h1>Su aliado en el mercado local</h1>
+                <h1>{text3}</h1>
               </div>
             </div>
           </div>
@@ -49,7 +52,7 @@ const TopSection = ({ location }) =>{
   return(
     <div className="top-section-default">
       <div className="container">
-        <Navbar />
+        <Navbar lang={lang} />
       </div>
     </div>
   )
