@@ -251,7 +251,7 @@ body.no-scroll{
 .navbar{
   height: 80px;
   justify-content: space-between;
-  padding: 10px 40px 10px 20px;
+  padding: 10px 64px 10px 20px;
   /* border: 1px solid red; */
 }
 
@@ -264,6 +264,39 @@ body.no-scroll{
   color: #2A3D4C;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.lang-box{
+  position: absolute;
+  z-index: 3;
+  right: 40px;
+  top: 42px;
+}
+
+.lang-box p{
+  font-weight: 500;
+  margin: 0 5px 0 0;
+  color: #2A3D4C;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.lang-box p:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  border-radius: 3px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.lang-box p.selected:after{
+  width: 100%;
+  background: white;
 }
 
 .menu{

@@ -7,6 +7,7 @@ import Team from './components/Team'
 import Areas from './components/Areas'
 import Trabajo from './components/Trabajo'
 import Datos from './components/Datos'
+import Lang from './components/Lang'
 import './App.css'
 import Rodal from 'rodal';
 import 'rodal/lib/rodal.css'
@@ -55,9 +56,10 @@ class App extends Component {
                 >
                   <Datos />
                 </Rodal>
+                {/* <Lang /> */}
               <Route render={ (props) => {
                 return (
-                  <TopSection location={props.location.pathname} lang={lang} />
+                  <TopSection handleLang={this.handleLang} location={props.location.pathname} lang={lang} />
                 )
               }} />
               <Route render={({ location }) =>
