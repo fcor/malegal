@@ -1711,18 +1711,20 @@ footer{
   fill: #D5EDFF;
 }
 
-.contact-detail-icon.small {
-  width: 12px;
-  margin-right: 10px;
+.contact-detail-text.small {
+  padding-top: 4px;
+  margin: 4px 0 !important;
 }
 
-.contact-detail-text{
+.contact-detail-text,
+.contact-detail-text a{
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
   color: #5D9AAF;
   /* letter-spacing: 2px; */
   margin: 8px 0;
+  text-decoration: none;
 }
 
 .menu-footer{

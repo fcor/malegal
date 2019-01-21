@@ -17,6 +17,16 @@ const mail =
     <path d="M14.05,8.79a1.73,1.73,0,0,1-.22.84L9.41,4.68,13.78.86a1.74,1.74,0,0,1,.27.93Zm-7-3.21L13.13.26A1.73,1.73,0,0,0,12.3,0H1.8A1.72,1.72,0,0,0,1,.26Zm1.7-.32L7.34,6.49a.44.44,0,0,1-.58,0L5.35,5.26l-4.48,5a1.73,1.73,0,0,0,.92.27H12.3a1.73,1.73,0,0,0,.92-.27ZM.32.86a1.74,1.74,0,0,0-.27.93v7a1.73,1.73,0,0,0,.22.84L4.7,4.68Zm0,0"/>
   </svg>
 
+const linkedin = 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.117 430.117" >
+    <path id="LinkedIn" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+      c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+      v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+      C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+      c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+      M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+  </svg>
+
 const getContactDetails = (variant, lang) => {
   if (variant === 'address') {
     if (lang === 'en') {
@@ -34,7 +44,14 @@ const getContactDetails = (variant, lang) => {
       icon: phone,
       text: '(+57) (1) 702 03 30 / 589 76 63'
     }
-  } else {
+  } else if (variant === 'linkedin') {
+    return {
+      icon: linkedin,
+      text: 'Muñoz Aya'
+    }
+  }
+  
+  else {
     return {
       icon: mail,
       text: 'administrativo@malegal.co'
@@ -79,6 +96,7 @@ const Contact = ({lang}) =>
       <ContactDetail lang={lang} variant="address" />
       <ContactDetail lang={lang} variant="phone" />
       <ContactDetail lang={lang} variant="mail" />
+      <ContactDetail lang={lang} variant="linkedin" />
     </div>
   </div>
 
@@ -98,8 +116,15 @@ const ContactDetail = ({ variant, lang }) => {
         className={`contact-detail-icon ${variant === 'address' ? 'small' : '' }`}
       /> */}
       {contact.icon}
-      <p className="contact-detail-text">
-        {contact.text}
+      <p className={`contact-detail-text ${variant === 'linkedin' ? 'small' : '' }`}>
+        { variant === 'linkedin'
+          ? <a rel="noopener noreferrer" 
+              target="_blank"
+              href="https://www.linkedin.com/company/munoz-aya">
+              {contact.text}
+            </a>
+          : contact.text
+        }
       </p>
     </div>
   )
