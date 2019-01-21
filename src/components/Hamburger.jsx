@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
 import Links from './Links'
+import Lang from './Lang'
 import ScrollLock from 'react-scrolllock'
 // import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
@@ -49,7 +50,7 @@ class Hamburger extends React.Component {
 
   render() {
     const { active } = this.state
-    const { variant, lang } = this.props
+    const { variant, lang, handleLang } = this.props
     return(
       <div id="side-menu" className="side-menu">
         <div className={`hamburger-menu`} onClick={this.handleClick} >
@@ -59,7 +60,7 @@ class Hamburger extends React.Component {
             <div className={`bar-menu b3 ${getColor(variant)} ${getAnimationCS(active)}`}></div>
           </div>
         </div>
-        <SideMenu isActive={active} onClickMobile={this.handleClick} lang={lang} />
+        <SideMenu handleLang={handleLang} isActive={active} onClickMobile={this.handleClick} lang={lang} />
       </div>
     )
   }
@@ -75,6 +76,7 @@ const SideMenu = (props) => {
       <div className="menu-responsive-content">
         <Logo />
         <Links lang={props.lang} variant="side" onClick={props.onClickMobile} />
+        <Lang lang={props.lang} handleLang={props.handleLang} />
       </div>
       <div className="menu-responsive-footer">
         Política de privacidad | © 2018 Malegal. Todos los derechos reservados.

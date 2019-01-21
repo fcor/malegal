@@ -251,12 +251,12 @@ body.no-scroll{
 .navbar{
   height: 80px;
   justify-content: space-between;
-  padding: 10px 69px 10px 20px;
+  padding: 10px 74px 10px 20px;
   /* border: 1px solid red; */
 }
 
 .navbar.classic{
-  padding: 10px 77px 10px 20px;
+  padding: 10px 82px 10px 20px;
 }
 
 .navbar.home .menu{
@@ -518,6 +518,10 @@ body.no-scroll{
     display: inline;
   }
 
+  .lang-box{
+    display: none;
+  }
+  
   .crossfade.desktop{
     display: none;
   }
@@ -546,7 +550,20 @@ body.no-scroll{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* position: relative; */
   }
+
+  .menu-responsive .lang-box{
+    display: flex;
+    flex-direction: row !important;
+    position: static;
+    margin-top: 15px;
+  }
+
+  .menu-responsive .lang-box p{
+    font-size: 20px !important;
+  }
+
   .menu-responsive-content img{
     width: 300px !important;
   }
@@ -643,7 +660,7 @@ body.no-scroll{
     width: 200px !important;
   }
   .menu-side{
-    margin-top: 70px;
+    margin-top: 50px;
   }
   .menu-side a{
     font-size: 25px;
@@ -695,6 +712,9 @@ body.no-scroll{
   .menu-side a{
     font-size: 22px;
     margin: 8px 0;
+  }
+  .menu-responsive .lang-box p{
+    font-size: 18px !important;
   }
 }
 

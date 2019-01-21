@@ -15,7 +15,7 @@ const TopSection = ({ location, lang, handleLang }) =>{
         <div className="crossfade bg1">
           <Lang lang={lang} handleLang={handleLang} />
           <div className="container">
-            <Navbar lang={lang} variant="home" type="home"  />
+            <Navbar handleLang={handleLang} lang={lang} variant="home" type="home"  />
             <div className="top-section-text bf column">
               <div className="top-section-box">
                 <div className="box"></div>
@@ -28,7 +28,7 @@ const TopSection = ({ location, lang, handleLang }) =>{
         <div className="crossfade bg2 desktop">
           <Lang lang={lang} handleLang={handleLang} />
           <div className="container">
-            <Navbar lang={lang} variant="home" type="home"  />
+            <Navbar handleLang={handleLang} lang={lang} variant="home" type="home"  />
             <div className="top-section-text column">
               <div className="top-section-box">
                 <div className="box"></div>
@@ -41,7 +41,7 @@ const TopSection = ({ location, lang, handleLang }) =>{
         <div className="crossfade bg3 desktop">
           <Lang lang={lang} handleLang={handleLang} />
           <div className="container">
-            <Navbar lang={lang} variant="home" type="home"  />
+            <Navbar handleLang={handleLang} lang={lang} variant="home" type="home"  />
             <div className="top-section-text column">
               <div className="top-section-box">
                 <div className="box"></div>
@@ -57,7 +57,7 @@ const TopSection = ({ location, lang, handleLang }) =>{
     <div className="top-section-default">
       <Lang lang={lang} handleLang={handleLang} />
       <div className="container">
-        <Navbar lang={lang} />
+        <Navbar handleLang={handleLang} lang={lang} />
       </div>
     </div>
   )
