@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
-const getCs = (variant) => {
+const getCs = (variant, lang) => {
   if (variant === 'navbar') {
-    return "menu row"
+    return `menu row ${lang}`
   }
   else if(variant === 'footer'){
     return "menu-footer column"
@@ -13,7 +13,7 @@ const getCs = (variant) => {
 }
 
 const Links = ({ variant, onClick, lang }) =>
-  <div className={getCs(variant)}>
+  <div className={getCs(variant, lang)}>
     {/* <NavLink
       exact
       to='/'

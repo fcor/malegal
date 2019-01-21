@@ -259,6 +259,10 @@ body.no-scroll{
   width: 530px;
 }
 
+.navbar.home .menu.en{
+  width: 400px;
+}
+
 .navbar.home .menu a{
   /* border-bottom: 2px solid #1A2934; */
   color: #2A3D4C;
