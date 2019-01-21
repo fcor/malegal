@@ -251,15 +251,19 @@ body.no-scroll{
 .navbar{
   height: 80px;
   justify-content: space-between;
-  padding: 10px 64px 10px 20px;
+  padding: 10px 69px 10px 20px;
   /* border: 1px solid red; */
+}
+
+.navbar.classic{
+  padding: 10px 77px 10px 20px;
 }
 
 .navbar.home .menu{
   width: 530px;
 }
 
-.navbar.home .menu.en{
+.navbar .menu.en{
   width: 400px;
 }
 
@@ -301,6 +305,10 @@ body.no-scroll{
 .lang-box p.selected:after{
   width: 100%;
   background: white;
+}
+
+.top-section-default .lang-box p {
+  color: #D5EDFF;
 }
 
 .menu{

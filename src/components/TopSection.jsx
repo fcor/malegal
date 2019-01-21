@@ -55,6 +55,7 @@ const TopSection = ({ location, lang, handleLang }) =>{
   }
   return(
     <div className="top-section-default">
+      <Lang lang={lang} handleLang={handleLang} />
       <div className="container">
         <Navbar lang={lang} />
       </div>
