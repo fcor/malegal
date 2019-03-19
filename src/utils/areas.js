@@ -1,20 +1,5 @@
 const areasEs = [
   {
-    title: 'Derecho Corporativo',
-    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
-    bullets: [
-      'Constitución de sociedades',
-      'Estructuración y revisión de contratos',
-      'Trámites e impulso de procesos ante autoridades',
-      'Asesoría en el diseño de estatutos y normatividad interna de la sociedad',
-      'Diseño de la estructura de gobierno societario',
-      'Acciones de responsabilidad contra administradores',
-      'Secretaría general',
-      'Solución de Controversias',
-      'Consultoría',
-    ]
-  },
-  {
     title: 'Derecho Financiero y del Mercado de Valores',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
     bullets: [
@@ -41,30 +26,31 @@ const areasEs = [
     ]
   },
   {
-    title: 'Derecho Laboral y Seguridad Social',
+    title: 'Derecho Corporativo',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
     bullets: [
-      'Atención de procesos judiciales ante la justicia ordinaria laboral',
+      'Constitución de sociedades',
+      'Estructuración y revisión de contratos',
+      'Trámites e impulso de procesos ante autoridades',
+      'Asesoría en el diseño de estatutos y normatividad interna de la sociedad',
+      'Diseño de la estructura de gobierno societario',
+      'Acciones de responsabilidad contra administradores',
+      'Secretaría general',
+      'Solución de Controversias',
       'Consultoría',
     ]
   },
+  // {
+  //   title: 'Derecho Laboral y Seguridad Social',
+  //   text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
+  //   bullets: [
+  //     'Atención de procesos judiciales ante la justicia ordinaria laboral',
+  //     'Consultoría',
+  //   ]
+  // },
 ]
 
 const areasEn = [
-  {
-    title: 'Corporate, Business & Transactions',
-    text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
-    bullets: [
-      'Creation of partnerships and corporations',
-      'Foreign exchange requirements',
-      'Corporate governance',
-      'Management of affairs in front of local authorities',
-      'Negotiation and drafting of agreements',
-      'Directors’ liability',
-      'Dispute resolution',
-      'Advice',
-    ]
-  },
   {
     title: 'Financial, Banking, Private Equity, FinTech, Derivatives & Structured Products',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
@@ -93,13 +79,27 @@ const areasEn = [
     ]
   },
   {
-    title: 'Social Security & Labor',
+    title: 'Corporate, Business & Transactions',
     text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
     bullets: [
+      'Creation of partnerships and corporations',
+      'Foreign exchange requirements',
+      'Corporate governance',
+      'Management of affairs in front of local authorities',
+      'Negotiation and drafting of agreements',
+      'Directors’ liability',
       'Dispute resolution',
       'Advice',
     ]
   },
+  // {
+  //   title: 'Social Security & Labor',
+  //   text: 'Cupcake ipsum dolor sit amet powder jelly-o. Halvah liquorice macaroon powder donut chupa chups pastry candy. Gummies jelly-o croissant cheesecake topping dragée bear claw muffin.',
+  //   bullets: [
+  //     'Dispute resolution',
+  //     'Advice',
+  //   ]
+  // },
 ]
 
 const getAreas = (lang) => {
