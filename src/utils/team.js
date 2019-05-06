@@ -1,9 +1,9 @@
-import alejandraSmall from '../assets/img/alejandra_small.jpg'
-import alejandraModal from '../assets/img/alejandra_modal.jpg'
+import nnSmall from '../assets/img/nn_small.jpg'
+import nnModal from '../assets/img/nn_modal.jpg'
 import cristinaModal from '../assets/img/cristina_modal2.jpg'
 import cristinaSmall from '../assets/img/cristina_small2.jpg'
-import mariaSmall from '../assets/img/maria_small2.jpg'
-import mariaModal from '../assets/img/maria_modal2.jpg'
+import carolinaSmall from '../assets/img/carolina_small.jpg'
+import carolinaModal from '../assets/img/carolina_modal.jpg'
 import sebastianSmall from '../assets/img/sebastian_small.jpg'
 import sebastianModal from '../assets/img/sebastian_modal.jpg'
 import danielaSmall from '../assets/img/daniela_small2.jpg'
@@ -35,21 +35,21 @@ const getMemberInfo = (name, lang) => {
   } else if (name === 'Maria') {
     if (lang === 'en') {
       return {
-        name: 'María Alejandra Giraldo',
-        position: 'Senior Associate',
-        avatar: alejandraSmall,
-        modal: alejandraModal,
-        email: 'mgiraldo@malegal.co',
-        bio: `Maria Alejandra is a lawyer with a master's degree in International Finance and Banking Law, who has wide experience in matters related to corporate governance and compliance, negotiation of financial agreements, securities and regulations of banking services and products. Currently, she coordinates the financial and banking practice in financial transactions, credit facilities, and in the banking and securities markets´ legal advice. As a Senior Associate at our firm, she has provided legal advice to the Liquidity Facility and Onshore Security Agent in a major Public-Private Partnership agreement for toll roads funding, construction and maintenance in Colombia, known as "Ruta del Cacao". She has further participated in the design of an standard long-term power purchase agreement in Colombia, and advised institutional clients on matters such as conflicts of interest and handling of inside information within their trading floors, among other issues.`
+        name: 'Carolina Uribe',
+        position: 'Associate',
+        avatar: carolinaSmall,
+        modal: carolinaModal,
+        email: 'c.uribe@malegal.co',
+        bio: `Carolina is a lawyer from the Pontificia Universidad Javeriana who has experience as legal advisor to local and foreign clients in Colombian banking and financial regulation, coordination and preparation of due diligence reports for financial entities in M&A deals, filings before the Colombian Financial Superintendence, drafting of loan and security agreements, advisor to tech companies who provide services to financial entities and structuration of financial products, among others. Currently, she coordinates the financial and banking practice in structured transactions and credit facilities, as well as the legal consulting of the firm in the practice of financial law, securities market and fintech.`
       }
     }
     return {
-      name: 'María Alejandra Giraldo',
-      position: 'Asociada Senior',
-      avatar: alejandraSmall,
-      modal: alejandraModal,
-      email: 'mgiraldo@malegal.co',
-      bio: 'María Alejandra es Abogada, LLM en Derecho Financiero y Bancario, con amplia experiencia en temas de gobierno corporativo y cumplimiento de las entidades financieras, negociación de contratos financieros, mercado de valores y regulación de servicios y productos bancarios. Coordina los esfuerzos del equipo en materia de transacciones estructuradas y facilidades crediticias, así como la consultoría legal de la firma en materia de derecho financiero y regulación cambiaria. Como Asociada Senior de nuestra firma, ha participado en la asesoría legal a los agentes del proyecto de infraestructura “Ruta del cacao” (proyecto de 4° Generación), en la estructuración de un contrato de compra y venta de energía a largo plazo, y en la asesoría a los clientes institucionales en temas de conflictos de interés y manejo de información privilegiada dentro de sus mesas de negociación, entre otros. '
+      name: 'Carolina Uribe',
+      position: 'Asociada',
+      avatar: carolinaSmall,
+      modal: carolinaModal,
+      email: 'c.uribe@malegal.co',
+      bio: 'Carolina es abogada de la Pontificia Universidad Javeriana con experiencia en la asesoría legal a clientes nacionales y extranjeros en regulación financiera, coordinación y preparación de reportes de debida diligencia de entidades financieras en el marco de transacciones de fusiones y adquisiciones, trámites ante la Superintendencia Financiera de Colombia, contratos de crédito, garantías mobiliarias, asesoría a empresas tecnológicas para la prestación de servicios a entidades financieras y estructuración de productos financieros, entre otros. Actualmente, coordina los esfuerzos del equipo en materia de transacciones estructuradas y facilidades crediticias, así como la consultoría legal de la firma en materia de derecho financiero, mercado de valores y fintech.'
     }
   } else if (name === 'Cristina') {
     if (lang === 'en') {
@@ -108,14 +108,24 @@ const getMemberInfo = (name, lang) => {
       email: 'emunoz@malegal.co',
       bio: 'Abogado, LLM, MBA, con más de 18 años de experiencia en temas relacionados con inversiones, derecho corporativo, bancario, y de valores, banca de inversión, fondos de inversión colectiva y fondos de capital privado; operaciones de tesorería y negociación de créditos sindicados. Cuenta con una amplia experiencia profesional en estos campos, tanto en el sector público como privado a través de su vinculación a firmas de abogados de primer nivel global y local, Citibank, Davivienda, y el Ministerio de Hacienda y Crédito Público, entre otros.'
     }
-  } else if (name === 'MariaP') {
+  } else if (name === 'SebastianD') {
+    if (lang === 'en') {
+      return {
+        name: 'Sebastián Duarte',
+        position: 'Associate ',
+        avatar: nnSmall,
+        modal: nnModal,
+        email: 'sduarte@malegal.co',
+        bio: 'nn is a Law student from Universidad Sergio Arboleda. He currently focuses on the  financial regulation, derivatives and fintech.'
+      }
+    }
     return {
-      name: 'Maria Paula Pulido',
-      position: 'Asociada',
-      avatar: mariaSmall,
-      modal: mariaModal,
-      email: 'mpulido@malegal.co',
-      bio: 'Abogada de la Universidad Sergio Arboleda, en la cual hizo parte del “Programa de Honores Rodrigo Noguera Laborde” que exalta a los estudiantes que se destacan por sutrayectoria académica y personal. Cuenta con experiencia en derecho comercial y laboral; en el área de litigio tiene experiencia en procesos laborales, de seguridad social y protección al consumidor financiero. Actualmente se desempeña en el área de litigio de la firma, teniendo a su cargo la representación y defensa jurídica de los procesos judiciales de las entidades financieras clientes de la Firma. Previo a su ingreso a la Firma, trabajó en el Banco CorpBanca y en el área de recursos humanos de la Multinacional ZT'
+      name: 'Sebastián Duarte',
+      position: 'Asociado',
+      avatar: nnSmall,
+      modal: nnModal,
+      email: 'sduarte@malegal.co',
+      bio: 'Sebastián es un abogado en formación en la Universidad Sergio Arboleda. Actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
     }
   }
 }
