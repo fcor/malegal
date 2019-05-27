@@ -6,6 +6,8 @@ import carolinaSmall from '../assets/img/carolina_small.jpg'
 import carolinaModal from '../assets/img/carolina_modal.jpg'
 import sebastianSmall from '../assets/img/sebastian_small.jpg'
 import sebastianModal from '../assets/img/sebastian_modal.jpg'
+import sebastian2Small from '../assets/img/sebastian2_small.jpg'
+import sebastian2Modal from '../assets/img/sebastian2_modal.jpg'
 import danielaSmall from '../assets/img/daniela_small2.jpg'
 import danielaModal from '../assets/img/daniela_modal2.jpg'
 import edgarSmall from '../assets/img/edgar_small.jpg'
@@ -113,17 +115,17 @@ const getMemberInfo = (name, lang) => {
       return {
         name: 'Sebastián Duarte',
         position: 'Associate ',
-        avatar: nnSmall,
-        modal: nnModal,
+        avatar: sebastian2Small,
+        modal: sebastian2Modal,
         email: 'sduarte@malegal.co',
-        bio: 'nn is a Law student from Universidad Sergio Arboleda. He currently focuses on the  financial regulation, derivatives and fintech.'
+        bio: 'Sebastián is a Law student from Universidad Sergio Arboleda. He currently focuses on financial regulation, derivatives and fintech.'
       }
     }
     return {
       name: 'Sebastián Duarte',
       position: 'Asociado',
-      avatar: nnSmall,
-      modal: nnModal,
+      avatar: sebastian2Small,
+      modal: sebastian2Modal,
       email: 'sduarte@malegal.co',
       bio: 'Sebastián es un abogado en formación en la Universidad Sergio Arboleda. Actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
     }
