@@ -12,6 +12,8 @@ import danielaSmall from '../assets/img/daniela_small2.jpg'
 import danielaModal from '../assets/img/daniela_modal2.jpg'
 import edgarSmall from '../assets/img/edgar_small.jpg'
 import edgarModal from '../assets/img/edgar_modal.jpg'
+import ligiaSmall from '../assets/img/ligia_small.jpg'
+import ligiaModal from '../assets/img/ligia_modal.jpg'
 
 
 const getMemberInfo = (name, lang) => {
@@ -128,6 +130,25 @@ const getMemberInfo = (name, lang) => {
       modal: sebastian2Modal,
       email: 'sduarte@malegal.co',
       bio: 'Sebastián es un abogado en formación en la Universidad Sergio Arboleda. Actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
+    }
+  } else if (name === 'Ligia') {
+    if (lang === 'en') {
+      return {
+        name: 'Ligia González',
+        position: 'Associate',
+        avatar: ligiaSmall,
+        modal: ligiaModal,
+        email: 'lgonzalez@malegal.co',
+        bio: 'Ligia is a lawyer from Universidad Externado de Colombia with a postgraduate degree in pensions and occupational risks of the same university. She has experience in labor and social security litigation, as well as advising clients regarding the applicable law to labor and employment matters. Currently she focuses on the labor practice area of the firm.'
+      }
+    }
+    return {
+      name: 'Ligia González',
+      position: 'Asociada',
+      avatar: ligiaSmall,
+      modal: ligiaModal,
+      email: 'lgonzalez@malegal.co',
+      bio: 'Ligia es abogada de la Universidad Externado de Colombia y especializada en Pensiones y Riesgos Laborales de la misma universidad. Cuenta con experiencia en litigios laborales y de seguridad social, así como asesoría general en la normatividad aplicable al sector laboral. Actualmente se desempeña en el área de litigio laboral de la firma.'
     }
   }
 }

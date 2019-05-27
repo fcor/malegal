@@ -9,7 +9,8 @@ const teamMembers = ['Daniela',
                      'Cristina',
                      'Sebastian',
                      'Edgar',
-                     'SebastianD'
+                     'SebastianD',
+                     'Ligia'
                     ]
 
 class Team extends React.Component {
