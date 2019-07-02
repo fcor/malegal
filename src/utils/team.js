@@ -120,7 +120,7 @@ const getMemberInfo = (name, lang) => {
         avatar: sebastian2Small,
         modal: sebastian2Modal,
         email: 'sduarte@malegal.co',
-        bio: 'Sebastián is a Law student from Universidad Sergio Arboleda. He currently focuses on financial regulation, derivatives and fintech.'
+        bio: 'Sebastián focuses on financial regulation, derivatives and fintech.'
       }
     }
     return {
@@ -129,7 +129,7 @@ const getMemberInfo = (name, lang) => {
       avatar: sebastian2Small,
       modal: sebastian2Modal,
       email: 'sduarte@malegal.co',
-      bio: 'Sebastián es un abogado en formación en la Universidad Sergio Arboleda. Actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
+      bio: 'Sebastián actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
     }
   } else if (name === 'Ligia') {
     if (lang === 'en') {
