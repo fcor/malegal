@@ -8,7 +8,6 @@ const teamMembers = ['Daniela',
                      'Maria',
                      'Sebastian',
                      'Edgar',
-                     'SebastianD',
                      'Ligia'
                     ]
 
