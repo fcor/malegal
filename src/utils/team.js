@@ -14,6 +14,8 @@ import edgarSmall from '../assets/img/edgar_small.jpg'
 import edgarModal from '../assets/img/edgar_modal.jpg'
 import ligiaSmall from '../assets/img/ligia_small.jpg'
 import ligiaModal from '../assets/img/ligia_modal.jpg'
+import paulaSmall from '../assets/img/paula_small.png'
+import paulaModal from '../assets/img/paula_modal.png'
 
 
 const getMemberInfo = (name, lang) => {
@@ -149,6 +151,25 @@ const getMemberInfo = (name, lang) => {
       modal: ligiaModal,
       email: 'lgonzalez@malegal.co',
       bio: 'Ligia es abogada de la Universidad Externado de Colombia y especializada en Pensiones y Riesgos Laborales de la misma universidad. Cuenta con experiencia en litigios laborales y de seguridad social, así como asesoría general en la normatividad aplicable al sector laboral. Actualmente se desempeña en el área de litigio laboral de la firma.'
+    }
+  } else if (name === 'Paula') {
+    if (lang === 'en') {
+      return {
+        name: 'Paula Knudson',
+        position: 'Associate',
+        avatar: paulaSmall,
+        modal: paulaModal,
+        email: 'pknudson@malegal.co',
+        bio: 'Paula is a lawyer from Universidad del Rosario who has experience as legal advisor to local and foreign clients in transactions related to financial law and capital markets, especially in project finance, corporate finance, security packages and others. Prior to joining the Firm, she worked at a top tier law firm and currently she is a member of the financial and banking practice area.'
+      }
+    }
+    return {
+      name: 'Paula Knudson',
+      position: 'Asociada',
+      avatar: paulaSmall,
+      modal: paulaModal,
+      email: 'pknudson@malegal.co',
+      bio: 'Paula es abogada de la Universidad del Rosario con experiencia en asesoría legal de clientes nacionales e internacionales en transacciones relacionadas con Derecho Financiero y Mercado de Capitales, principalmente en la financiación de proyectos 4G, proyección de créditos corporativos, esquemas de garantías, entre otros. Antes de su vinculación a la Firma, Paula trabajó en una firma de abogados de primer nivel y actualmente se desempeña en el área de Derecho Financiero y Mercado de Capitales.'
     }
   }
 }
