@@ -4,12 +4,12 @@ import getMemberInfo from '../utils/team.js'
 import 'rodal/lib/rodal.css'
 import mail from '../assets/img/mail.png'
 
-const teamMembers = ['Daniela',
+const teamMembers = [
                      'Maria',
                      'Sebastian',
                      'Edgar',
-                     'Ligia',
                      'Paula',
+                     'Mariana',
                     ]
 
 class Team extends React.Component {
@@ -17,7 +17,7 @@ class Team extends React.Component {
     super(props)
     this.state = {
       isShowingDetails: false,
-      member: 'Daniela'
+      member: 'Maria'
     }
 
     this.onClick = this.onClick.bind(this)

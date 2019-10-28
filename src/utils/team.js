@@ -1,44 +1,17 @@
-import nnSmall from '../assets/img/nn_small.jpg'
-import nnModal from '../assets/img/nn_modal.jpg'
-import cristinaModal from '../assets/img/cristina_modal2.jpg'
-import cristinaSmall from '../assets/img/cristina_small2.jpg'
 import carolinaSmall from '../assets/img/carolina_small.jpg'
 import carolinaModal from '../assets/img/carolina_modal.jpg'
 import sebastianSmall from '../assets/img/sebastian_small.jpg'
 import sebastianModal from '../assets/img/sebastian_modal.jpg'
-import sebastian2Small from '../assets/img/sebastian2_small.jpg'
-import sebastian2Modal from '../assets/img/sebastian2_modal.jpg'
-import danielaSmall from '../assets/img/daniela_small2.jpg'
-import danielaModal from '../assets/img/daniela_modal2.jpg'
 import edgarSmall from '../assets/img/edgar_small.jpg'
 import edgarModal from '../assets/img/edgar_modal.jpg'
-import ligiaSmall from '../assets/img/ligia_small.jpg'
-import ligiaModal from '../assets/img/ligia_modal.jpg'
-import paulaSmall from '../assets/img/paula_small.png'
-import paulaModal from '../assets/img/paula_modal.png'
+import paulaSmall from '../assets/img/paula_small.jpg'
+import paulaModal from '../assets/img/paula_modal.jpg'
+import marianaSmall from '../assets/img/mariana_small.jpg'
+import marianaModal from '../assets/img/mariana_modal.jpg'
 
 
 const getMemberInfo = (name, lang) => {
-  if (name === 'Daniela') {
-    if (lang === 'en') {
-      return {
-        name: 'Daniela Rivera',
-        position: 'Associate ',
-        avatar: danielaSmall,
-        modal: danielaModal,
-        email: 'drivera@malegal.co',
-        bio: 'Daniela is a graduate of the School of Law of Sergio Arboleda University, and a participant of the “Rodrigo Noguera Laborde Honors Program”, which awards scholarships for those students who demonstrate excellence in both their academic and personal backgrounds. She has experience in labor, social security and commercial law, encompassing legal advice and litigation. Currently she leads the litigation area, where she is in charge of the representation and defense of clients in legal proceedings. Prior to joining to the firm she worked at Copbanca Bank (currently Itaú), and more recently, at the Chinese multinational ZTE Corporation.'
-      }
-    }
-    return {
-      name: 'Daniela Rivera',
-      position: 'Asociada',
-      avatar: danielaSmall,
-      modal: danielaModal,
-      email: 'drivera@malegal.co',
-      bio: 'Abogada de la Universidad Sergio Arboleda, en la cual hizo parte del “Programa de Honores Rodrigo Noguera Laborde” que exalta a los estudiantes que se destacan por su trayectoria académica y personal. Cuenta con experiencia en derecho comercial y laboral; en el área de litigio tiene experiencia en procesos laborales, de seguridad social y protección al consumidor financiero. Actualmente se desempeña en el área de litigio de la firma, teniendo a su cargo la representación y defensa jurídica de los procesos judiciales de las entidades financieras clientes de la Firma. Previo a su ingreso a la Firma, trabajó en el Banco CorpBanca y en el área de recursos humanos de la Multinacional ZTE.'
-    }
-  } else if (name === 'Maria') {
+  if (name === 'Maria') {
     if (lang === 'en') {
       return {
         name: 'Carolina Uribe',
@@ -56,25 +29,6 @@ const getMemberInfo = (name, lang) => {
       modal: carolinaModal,
       email: 'c.uribe@malegal.co',
       bio: 'Carolina es abogada de la Pontificia Universidad Javeriana con experiencia en la asesoría legal a clientes nacionales y extranjeros en regulación financiera, coordinación y preparación de reportes de debida diligencia de entidades financieras en el marco de transacciones de fusiones y adquisiciones, trámites ante la Superintendencia Financiera de Colombia, contratos de crédito, garantías mobiliarias, asesoría a empresas tecnológicas para la prestación de servicios a entidades financieras y estructuración de productos financieros, entre otros. Actualmente, coordina los esfuerzos del equipo en materia de transacciones estructuradas y facilidades crediticias, así como la consultoría legal de la firma en materia de derecho financiero, mercado de valores y fintech.'
-    }
-  } else if (name === 'Cristina') {
-    if (lang === 'en') {
-      return {
-        name: 'Cristina Rojas',
-        position: 'Legal assistant',
-        avatar: cristinaSmall,
-        modal: cristinaModal,
-        email: 'administrativo@malegal.co',
-        bio: 'Legal assistant with more than 20 years of working experience at leading local firms. Prior to joining to the firm she worked at Baker Mckenzie Colombia.'
-      }  
-    }
-    return {
-      name: 'Cristina Rojas',
-      position: 'Asistente administrativa',
-      avatar: cristinaSmall,
-      modal: cristinaModal,
-      email: 'administrativo@malegal.co',
-      bio: 'Asistente administrativa y contable con más de 20 años de experiencia apoyando importantes firmas de abogados locales. Antes de vincularse con la firma trabajó para Baker McKenzie Colombia.'
     }
   } else if (name === 'Sebastian') {
     if (lang === 'en') {
@@ -114,44 +68,6 @@ const getMemberInfo = (name, lang) => {
       email: 'emunoz@malegal.co',
       bio: 'Abogado, LLM, MBA, con más de 18 años de experiencia en temas relacionados con inversiones, derecho corporativo, bancario, y de valores, banca de inversión, fondos de inversión colectiva y fondos de capital privado; operaciones de tesorería y negociación de créditos sindicados. Cuenta con una amplia experiencia profesional en estos campos, tanto en el sector público como privado a través de su vinculación a firmas de abogados de primer nivel global y local, Citibank, Davivienda, y el Ministerio de Hacienda y Crédito Público, entre otros.'
     }
-  } else if (name === 'SebastianD') {
-    if (lang === 'en') {
-      return {
-        name: 'Sebastián Duarte',
-        position: 'Associate ',
-        avatar: sebastian2Small,
-        modal: sebastian2Modal,
-        email: 'sduarte@malegal.co',
-        bio: 'Sebastián focuses on financial regulation, derivatives and fintech.'
-      }
-    }
-    return {
-      name: 'Sebastián Duarte',
-      position: 'Asociado',
-      avatar: sebastian2Small,
-      modal: sebastian2Modal,
-      email: 'sduarte@malegal.co',
-      bio: 'Sebastián actualmente se desempeña en el área de Derecho Financiero de la firma, en temas regulatorios, derivados y fintech.'
-    }
-  } else if (name === 'Ligia') {
-    if (lang === 'en') {
-      return {
-        name: 'Ligia González',
-        position: 'Associate',
-        avatar: ligiaSmall,
-        modal: ligiaModal,
-        email: 'lgonzalez@malegal.co',
-        bio: 'Ligia is a lawyer from Universidad Externado de Colombia with a postgraduate degree in pensions and occupational risks of the same university. She has experience in labor and social security litigation, as well as advising clients regarding the applicable law to labor and employment matters. Currently she focuses on the labor practice area of the firm.'
-      }
-    }
-    return {
-      name: 'Ligia González',
-      position: 'Asociada',
-      avatar: ligiaSmall,
-      modal: ligiaModal,
-      email: 'lgonzalez@malegal.co',
-      bio: 'Ligia es abogada de la Universidad Externado de Colombia y especializada en Pensiones y Riesgos Laborales de la misma universidad. Cuenta con experiencia en litigios laborales y de seguridad social, así como asesoría general en la normatividad aplicable al sector laboral. Actualmente se desempeña en el área de litigio laboral de la firma.'
-    }
   } else if (name === 'Paula') {
     if (lang === 'en') {
       return {
@@ -170,6 +86,25 @@ const getMemberInfo = (name, lang) => {
       modal: paulaModal,
       email: 'pknudson@malegal.co',
       bio: 'Paula es abogada de la Universidad del Rosario con experiencia en asesoría legal de clientes nacionales e internacionales en transacciones relacionadas con Derecho Financiero y Mercado de Capitales, principalmente en la financiación de proyectos 4G, proyección de créditos corporativos, esquemas de garantías, entre otros. Antes de su vinculación a la Firma, Paula trabajó en una firma de abogados de primer nivel y actualmente se desempeña en el área de Derecho Financiero y Mercado de Capitales.'
+    }
+  } else if (name === 'Mariana') {
+    if (lang === 'en') {
+      return {
+        name: 'Mariana Fonnegra',
+        position: 'Associate',
+        avatar: marianaSmall,
+        modal: marianaModal,
+        email: 'mfonnegra@malegal.co',
+        bio: 'Mariana is paralegal in the Banking and Corporate Law practice areas of the Firm. Currently, she is a law student from Universidad del Rosario with emphasis in commercial law. Previously Mariana worked at a local firm in the commercial law practice area and due to her academic excellence, she has been an academic assistant of multiple professors.'
+      }
+    }
+    return {
+      name: 'Mariana Fonnegra',
+      position: 'Asociada',
+      avatar: marianaSmall,
+      modal: marianaModal,
+      email: 'mfonnegra@malegal.co',
+      bio: 'Mariana es paralegal en las áreas de Derecho Financiero y Derecho Corporativo de la Firma. Actualmente, es estudiante de Jurisprudencia de la Universidad del Rosario con énfasis en derecho comercial. Anteriormente, Mariana trabajó en una firma de abogados local en el área de derecho comercial y por su excelencia académica, se ha desempeñado como monitora académica de múltiples profesores.'
     }
   }
 }
